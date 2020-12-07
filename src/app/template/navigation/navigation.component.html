@@ -1,7 +1,7 @@
  <!-- Sidebar -->
  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" routerLink="index.html">
          <div class="sidebar-brand-icon rotate-n-15">
             
          </div>
@@ -13,7 +13,7 @@
 
      <!-- Nav Item - Dashboard -->
      <li class="nav-item active">
-         <a class="nav-link" href="index.html">
+         <a class="nav-link" routerLink="/dashboard">
              <i class="fas fa-fw fa-tachometer-alt"></i>
              <span>Tableau de bord</span></a>
      </li>
@@ -26,7 +26,7 @@
 
      <!-- Nav Item - Pages Collapse Menu -->
      <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapseTwo"
              aria-expanded="true" aria-controls="collapseTwo">
              <i class="fas fa-fw fa-cog"></i>
              <span>Département</span>
@@ -34,8 +34,8 @@
          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter une departement</a>
-                 <a class="collapse-item" href="buttons.html">Liste des departemenst</a>
+                 <a class="collapse-item" routerLink="/">Ajouter une departement</a>
+                 <a class="collapse-item" routerLink="/departement">Liste des departemenst</a>
                  
              </div>
          </div>
@@ -43,7 +43,7 @@
 
 
       <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse3"
              aria-expanded="true" aria-controls="collapse3">
              <i class="fas fa-fw fa-cog"></i>
              <span>Docteur</span>
@@ -51,15 +51,15 @@
          <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter une medecin</a>
-                 <a class="collapse-item" href="buttons.html">Liste des medecins</a>
+                 <a class="collapse-item" routerLink="/">Ajouter une medecin</a>
+                 <a class="collapse-item" routerLink="/medecin">Liste des medecins</a>
                  
              </div>
          </div>
      </li>
 
       <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse3"
              aria-expanded="true" aria-controls="collapse3">
              <i class="fas fa-fw fa-cog"></i>
              <span>Patient</span>
@@ -67,10 +67,10 @@
          <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter une patient</a>
-                 <a class="collapse-item" href="buttons.html">Liste des patients</a>
-                  <a class="collapse-item" href="buttons.html">Ajouter un document</a>
-                 <a class="collapse-item" href="buttons.html">Liste des documents</a>
+                 <a class="collapse-item" routerLink="/">Ajouter une patient</a>
+                 <a class="collapse-item" routerLink="/patient">Liste des patients</a>
+                  <a class="collapse-item" routerLink="/">Ajouter un document</a>
+                 <a class="collapse-item" routerLink="/document">Liste des documents</a>
                  
              </div>
          </div>
@@ -78,7 +78,7 @@
 
 
       <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse4"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse4"
              aria-expanded="true" aria-controls="collapse4">
              <i class="fas fa-fw fa-cog"></i>
              <span>Programme</span>
@@ -86,8 +86,8 @@
          <div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter un horaire</a>
-                 <a class="collapse-item" href="buttons.html">Liste des horaires</a>
+                 <a class="collapse-item" routerLink="/">Ajouter un horaire</a>
+                 <a class="collapse-item" routerLink="/program">Liste des horaires</a>
                
                  
              </div>
@@ -95,7 +95,7 @@
      </li>
 
       <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse5"
              aria-expanded="true" aria-controls="collapse5">
              <i class="fas fa-fw fa-cog"></i>
              <span>Rendez-vous</span>
@@ -103,8 +103,8 @@
          <div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter un rendez-vous</a>
-                 <a class="collapse-item" href="buttons.html">Liste des rendez-vous</a>
+                 <a class="collapse-item" routerLink="/">Ajouter un rendez-vous</a>
+                 <a class="collapse-item" routerLink="/rendezvous">Liste des rendez-vous</a>
                
                  
              </div>
@@ -113,7 +113,7 @@
 
 
       <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse6"
              aria-expanded="true" aria-controls="collapse6">
              <i class="fas fa-fw fa-cog"></i>
              <span>Prescription</span>
@@ -121,8 +121,8 @@
          <div id="collapse6" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter un prescription</a>
-                 <a class="collapse-item" href="buttons.html">Liste des prescription</a>
+                 <a class="collapse-item" routerLink="/">Ajouter un prescription</a>
+                 <a class="collapse-item" routerLink="/prescription">Liste des prescription</a>
                
                  
              </div>
@@ -131,7 +131,7 @@
 
 
       <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse7"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse7"
              aria-expanded="true" aria-controls="collapse7">
              <i class="fas fa-fw fa-cog"></i>
              <span>Compte</span>
@@ -139,12 +139,12 @@
          <div id="collapse7" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter un compte</a>
-                 <a class="collapse-item" href="buttons.html">Liste des comptes</a>
-                  <a class="collapse-item" href="buttons.html">Ajouter une facture</a>
-                 <a class="collapse-item" href="buttons.html">Liste des factures</a>
-                  <a class="collapse-item" href="buttons.html">Ajouter un paiement</a>
-                 <a class="collapse-item" href="buttons.html">Liste des paiement</a>
+                 <a class="collapse-item" routerLink="/">Ajouter un compte</a>
+                 <a class="collapse-item" routerLink="/accountant">Liste des comptes</a>
+                  <a class="collapse-item" routerLink="/">Ajouter une facture</a>
+                 <a class="collapse-item" routerLink="/invoice">Liste des factures</a>
+                  <a class="collapse-item" routerLink="/">Ajouter un paiement</a>
+                 <a class="collapse-item" routerLink="/payment">Liste des paiement</a>
                
                  
              </div>
@@ -153,7 +153,7 @@
 
 
      <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse8"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse8"
              aria-expanded="true" aria-controls="collapse8">
              <i class="fas fa-fw fa-cog"></i>
              <span>Assurance</span>
@@ -161,8 +161,8 @@
          <div id="collapse8" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter un assurance</a>
-                 <a class="collapse-item" href="buttons.html">Liste des assurances</a>
+                 <a class="collapse-item" routerLink="/">Ajouter un assurance</a>
+                 <a class="collapse-item" routerLink="/insurance">Liste des assurances</a>
                
                  
              </div>
@@ -170,7 +170,7 @@
      </li>
 
       <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse9"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse9"
              aria-expanded="true" aria-controls="collapse9">
              <i class="fas fa-fw fa-cog"></i>
              <span>Facture</span>
@@ -178,10 +178,10 @@
          <div id="collapse9" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter un service</a>
-                 <a class="collapse-item" href="buttons.html">Liste des services</a>
-                  <a class="collapse-item" href="buttons.html">Ajouter une facture</a>
-                 <a class="collapse-item" href="buttons.html">Liste des facture</a>
+                 <a class="collapse-item" routerLink="/">Ajouter un service</a>
+                 <a class="collapse-item" routerLink="/service">Liste des services</a>
+                  <a class="collapse-item" routerLink="/">Ajouter une facture</a>
+                 <a class="collapse-item" routerLink="/invoice">Liste des facture</a>
                
                  
              </div>
@@ -189,7 +189,7 @@
      </li>
      
        <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse10"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse10"
              aria-expanded="true" aria-controls="collapse10">
              <i class="fas fa-fw fa-cog"></i>
              <span>Dossier</span>
@@ -197,8 +197,8 @@
          <div id="collapse10" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter un patient</a>
-                 <a class="collapse-item" href="buttons.html">Liste des patients</a>
+                 <a class="collapse-item" routerLink="/">Ajouter un patient</a>
+                 <a class="collapse-item" routerLink="/patient">Liste des patients</a>
                 
                  
              </div>
@@ -207,7 +207,7 @@
 
 
       <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse11"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse11"
              aria-expanded="true" aria-controls="collapse11">
              <i class="fas fa-fw fa-cog"></i>
              <span>RH</span>
@@ -215,12 +215,12 @@
          <div id="collapse11" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">Ajouter un employés</a>
-                 <a class="collapse-item" href="buttons.html">Liste des comptables</a>
-                  <a class="collapse-item" href="buttons.html">Liste des laboratoir</a>
-                   <a class="collapse-item" href="buttons.html">Liste des infimires</a>
-                    <a class="collapse-item" href="buttons.html">Liste des pharmaciens</a>
-                     <a class="collapse-item" href="buttons.html">Liste des receptioniste</a>
+                 <a class="collapse-item" routerLink="/employee">Ajouter un employés</a>
+                 <a class="collapse-item" routerLink="/accountant">Liste des comptables</a>
+                  <a class="collapse-item" routerLink="/laboratory">Liste des laboratoir</a>
+                   <a class="collapse-item" routerLink="/nurse">Liste des infimieres</a>
+                    <a class="collapse-item" routerLink="/pharmasist">Liste des pharmaciens</a>
+                     <a class="collapse-item" routerLink="/recepionist">Liste des receptioniste</a>
                
                  
              </div>
@@ -228,7 +228,7 @@
      </li>
 
        <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse12"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse12"
              aria-expanded="true" aria-controls="collapse12">
              <i class="fas fa-fw fa-cog"></i>
              <span>Activités</span>
@@ -236,12 +236,12 @@
          <div id="collapse12" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">rapport des naissances</a>
-                 <a class="collapse-item" href="buttons.html">rapport des deces</a>
-                  <a class="collapse-item" href="buttons.html">rapport desvoperateurs</a>
-                   <a class="collapse-item" href="buttons.html">rapport des investigations</a>
-                    <a class="collapse-item" href="buttons.html">rapport des medicaments</a>
-                     <a class="collapse-item" href="buttons.html">rapport des categories de medecins</a>
+                 <a class="collapse-item" routerLink="/bith">rapport des naissances</a>
+                 <a class="collapse-item" routerLink="/dead">rapport des deces</a>
+                  <a class="collapse-item" routerLink="/operator">rapport des operateurs</a>
+                   <a class="collapse-item" routerLink="/investigation">rapport des investigations</a>
+                    <a class="collapse-item" routerLink="/medicament">rapport des medicaments</a>
+                     <a class="collapse-item" routerLink="/categorie">rapport des categories de medecins</a>
                
                  
              </div>
@@ -251,7 +251,7 @@
     
       
     <li class="nav-item">
-         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse13"
+         <a class="nav-link collapsed" routerLink="#" data-toggle="collapse" data-target="#collapse13"
              aria-expanded="true" aria-controls="collapse13">
              <i class="fas fa-fw fa-cog"></i>
              <span>Paramètres</span>
@@ -259,7 +259,7 @@
          <div id="collapse13" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
              <div class="bg-white py-2 collapse-inner rounded">
                  
-                 <a class="collapse-item" href="buttons.html">General</a>
+                 <a class="collapse-item" routerLink="/configuration">General</a>
                 
                  
              </div>
