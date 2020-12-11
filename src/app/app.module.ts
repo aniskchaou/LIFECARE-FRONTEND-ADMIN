@@ -30,6 +30,8 @@ import { DeadComponent } from './content/dead/dead.component';
 import { CategorieComponent } from './content/categorie/categorie.component';
 import { IvestigationComponent } from './content/ivestigation/ivestigation.component';
 import { OperatorComponent } from './content/operator/operator.component';
+import { LoginComponent } from './content/login/login.component';
+import { ConfigurationComponent } from './content/configuration/configuration.component';
 
 const routes:Routes=[
   {path:'invoice',component:InvoiceComponent},
@@ -56,9 +58,10 @@ const routes:Routes=[
   {path:'program',component:ProgramComponent},
   {path:'receptionist',component:RecepionistComponent},
   {path:'rendezvous',component:RendezVousComponent},
-  {path:'insurance',component:InsuranceComponent},
-  {path:'',redirectTo:'dashboard',pathMatch:'full'},
-  {path:'**',redirectTo:'dashboard',pathMatch:'full'}]
+  {path:'login',component:LoginComponent},
+  {path:'configuration',component:ConfigurationComponent},
+  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'**',redirectTo:'login',pathMatch:'full'}]
 
 
 @NgModule({
@@ -89,7 +92,9 @@ const routes:Routes=[
     DeadComponent,
     CategorieComponent,
     IvestigationComponent,
-    OperatorComponent
+    OperatorComponent,
+    LoginComponent,
+    ConfigurationComponent
   ],
   imports: [
     BrowserModule,
