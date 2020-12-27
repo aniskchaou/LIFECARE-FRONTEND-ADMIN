@@ -2,62 +2,85 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './template/navigation/navigation.component';
-import { InvoiceComponent } from './content/invoice/invoice.component';
-import { MedicamentComponent } from './content/medicament/medicament.component';
-import { ServiceComponent } from './content/service/service.component';
+
 import { RouterModule, Routes } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
-import { DashboardComponent } from './content/dashboard/dashboard.component';
+import { AccountComponent } from './modules/account/account/account.component';
+import { AddAccountComponent } from './modules/account/add-account/add-account.component';
+import { AddAppointmentComponent } from './modules/appointment/add-appointment/add-appointment.component';
+import { RendezVousComponent } from './modules/appointment/rendez-vous/rendez-vous.component';
+import { BirthdayComponent } from './modules/birth/birthday/birthday.component';
+import { CategorieComponent } from './modules/category/categorie/categorie.component';
+import { DeadComponent } from './modules/dead/dead/dead.component';
+import { AddDepartementComponent } from './modules/departement/add-departement/add-departement.component';
+import { DepartementComponent } from './modules/departement/departement/departement.component';
+import { AddDoctorComponent } from './modules/doctor/add-doctor/add-doctor.component';
+import { MedecinComponent } from './modules/doctor/medecin/medecin.component';
+import { AddDocumentComponent } from './modules/document/add-document/add-document.component';
+import { DocumentComponent } from './modules/document/document/document.component';
+import { AccountantComponent } from './modules/employee/accountant/accountant.component';
+import { AddEmployeeComponent } from './modules/employee/add-employee/add-employee.component';
+import { LaboratoryComponent } from './modules/employee/laboratory/laboratory.component';
+import { NurseComponent } from './modules/employee/nurse/nurse.component';
+import { OperatorComponent } from './modules/employee/operator/operator.component';
+import { PharmasistComponent } from './modules/employee/pharmasist/pharmasist.component';
+import { RecepionistComponent } from './modules/employee/recepionist/recepionist.component';
+import { ConfigurationComponent } from './modules/general/configuration/configuration.component';
+import { DashboardComponent } from './modules/general/dashboard/dashboard.component';
+import { LoginComponent } from './modules/general/login/login.component';
+import { AddInsuranceComponent } from './modules/insurance/add-insurance/add-insurance.component';
+import { InsuranceComponent } from './modules/insurance/insurance/insurance.component';
+import { IvestigationComponent } from './modules/investigation/ivestigation/ivestigation.component';
+import { AddInvoiceComponent } from './modules/invoice/add-invoice/add-invoice.component';
+import { InvoiceComponent } from './modules/invoice/invoice/invoice.component';
+import { MedicamentComponent } from './modules/medicament/medicament/medicament.component';
+import { AddPatientComponent } from './modules/patient/add-patient/add-patient.component';
+import { PatientComponent } from './modules/patient/patient/patient.component';
+import { AddPaymentComponent } from './modules/payment/add-payment/add-payment.component';
+import { PaymentComponent } from './modules/payment/payment/payment.component';
+import { AddPrescriptionComponent } from './modules/prescription/add-prescription/add-prescription.component';
+import { PrescriptionComponent } from './modules/prescription/prescription/prescription.component';
+import { AddScheduleComponent } from './modules/schedule/add-schedule/add-schedule.component';
+import { ProgramComponent } from './modules/schedule/program/program.component';
+import { AddServiceComponent } from './modules/service/add-service/add-service.component';
+import { ServiceComponent } from './modules/service/service/service.component';
 import { HeaderComponent } from './template/header/header.component';
-import { DepartementComponent } from './content/departement/departement.component';
-import { MedecinComponent } from './content/medecin/medecin.component';
-import { PatientComponent } from './content/patient/patient.component';
-import { DocumentComponent } from './content/document/document.component';
-import { ProgramComponent } from './content/program/program.component';
-import { RendezVousComponent } from './content/rendez-vous/rendez-vous.component';
-import { PrescriptionComponent } from './content/prescription/prescription.component';
-import { AccountComponent } from './content/account/account.component';
-import { PaymentComponent } from './content/payment/payment.component';
-import { InsuranceComponent } from './content/insurance/insurance.component';
-import { AccountantComponent } from './content/accountant/accountant.component';
-import { LaboratoryComponent } from './content/laboratory/laboratory.component';
-import { NurseComponent } from './content/nurse/nurse.component';
-import { PharmasistComponent } from './content/pharmasist/pharmasist.component';
-import { RecepionistComponent } from './content/recepionist/recepionist.component';
-import { BirthdayComponent } from './content/birthday/birthday.component';
-import { DeadComponent } from './content/dead/dead.component';
-import { CategorieComponent } from './content/categorie/categorie.component';
-import { IvestigationComponent } from './content/ivestigation/ivestigation.component';
-import { OperatorComponent } from './content/operator/operator.component';
-import { LoginComponent } from './content/login/login.component';
-import { ConfigurationComponent } from './content/configuration/configuration.component';
+import { NavigationComponent } from './template/navigation/navigation.component';
+
 
 const routes:Routes=[
   {path:'invoice',component:InvoiceComponent},
+  {path:'addinvoice',component:AddInvoiceComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'service',component:ServiceComponent},
+  {path:'addservice',component:AddServiceComponent},
   {path:'accountant',component:AccountantComponent},
   {path:'birth',component:BirthdayComponent},
   {path:'category',component:CategorieComponent},
   {path:'dead',component:DeadComponent},
   {path:'medicament',component:MedicamentComponent},
   {path:'departement',component:DepartementComponent},
+  {path:'adddepartement',component:AddDepartementComponent},
   {path:'document',component:DocumentComponent},
   {path:'insurance',component:InsuranceComponent},
   {path:'laboratory',component:LaboratoryComponent},
   {path:'insurance',component:InsuranceComponent},
-  {path:'medecin',component:MedecinComponent},
+  {path:'addinsurance',component:AddInsuranceComponent},
+  {path:'adddoctor',component:AddDoctorComponent},
+  {path:'doctor',component:MedecinComponent},
   {path:'medicament',component:MedicamentComponent},
+  {path:'addmedicament',component:MedecinComponent},
   {path:'nurse',component:NurseComponent},
   {path:'operator',component:OperatorComponent},
   {path:'patient',component:PatientComponent},
+  {path:'addpatient',component:AddPatientComponent},
   {path:'payment',component:PaymentComponent},
   {path:'pharmasist',component:PharmasistComponent},
   {path:'prescription',component:PrescriptionComponent},
   {path:'program',component:ProgramComponent},
   {path:'receptionist',component:RecepionistComponent},
   {path:'rendezvous',component:RendezVousComponent},
+  {path:'addrendezvous',component:AddAppointmentComponent},
   {path:'login',component:LoginComponent},
   {path:'configuration',component:ConfigurationComponent},
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -94,7 +117,20 @@ const routes:Routes=[
     IvestigationComponent,
     OperatorComponent,
     LoginComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    AddDepartementComponent,
+    AddDoctorComponent,
+    AddPatientComponent,
+    AddDocumentComponent,
+    AddScheduleComponent,
+    AddAppointmentComponent,
+    AddPrescriptionComponent,
+    AddAccountComponent,
+    AddInvoiceComponent,
+    AddPaymentComponent,
+    AddInsuranceComponent,
+    AddServiceComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,
