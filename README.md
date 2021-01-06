@@ -2,7 +2,7 @@
 
 LifeCare is a web application for managing a hospital.
 
-## Informations : 
+## Informations 
 - Status :  under development
 - Latest version :  1.0
 - Sector: medical
