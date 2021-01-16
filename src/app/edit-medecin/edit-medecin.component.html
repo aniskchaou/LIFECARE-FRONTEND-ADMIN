@@ -1,0 +1,962 @@
+
+        <form action="https://hospitalnew.bdtask.com/demo7/doctor/create" class="form-inner" enctype="multipart/form-data"
+        method="post" accept-charset="utf-8">
+        <input type="hidden" name="csrf_stream_token" value="2f8edb916b1acaf6aa9af44ca4c08f57">
+    
+    
+    
+        <input type="hidden" name="user_id" value="">
+    
+        <div class="form-group row">
+            <label for="firstname" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Prénom </font>
+                </font><i class="text-danger">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">*</font>
+                    </font>
+                </i>
+            </label>
+            <div class="col-xs-9">
+                <input name="firstname" type="text" class="form-control" id="firstname" placeholder="Prénom" value="">
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="lastname" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Nom de famille </font>
+                </font><i class="text-danger">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">*</font>
+                    </font>
+                </i>
+            </label>
+            <div class="col-xs-9">
+                <input name="lastname" type="text" class="form-control" id="lastname" placeholder="Nom de famille" value="">
+            </div>
+        </div>
+    
+        <!-- display in edit mode -->
+        <div class="form-group row">
+            <label for="email" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Adresse e-mail </font>
+                </font><i class="text-danger">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">*</font>
+                    </font>
+                </i>
+            </label>
+            <div class="col-xs-9">
+                <input name="email" class="form-control" type="email" placeholder="Adresse e-mail" id="email" value="">
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="password" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Mot de passe </font>
+                </font><i class="text-danger">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">*</font>
+                    </font>
+                </i>
+            </label>
+            <div class="col-xs-9">
+                <input name="password" class="form-control" type="password" placeholder="Mot de passe" id="password">
+            </div>
+        </div>
+        <!-- ends of display edit mode-->
+    
+    
+        <div class="form-group row">
+            <label for="designation" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">La désignation</font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <input name="designation" type="text" class="form-control" id="designation" placeholder="La désignation"
+                    value="">
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="department_id" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">département </font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <select name="department_id" class="form-control select2-hidden-accessible" id="department_id" tabindex="-1"
+                    aria-hidden="true">
+                    <option value="" selected="selected">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Sélectionnez un département</font>
+                        </font>
+                    </option>
+                    <option value="13">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Néonatale</font>
+                        </font>
+                    </option>
+                    <option value="14">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Néphrologie</font>
+                        </font>
+                    </option>
+                    <option value="15">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Neurologie</font>
+                        </font>
+                    </option>
+                    <option value="16">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Oncologie</font>
+                        </font>
+                    </option>
+                    <option value="18">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Pharmacie</font>
+                        </font>
+                    </option>
+                    <option value="19">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Radiothérapie</font>
+                        </font>
+                    </option>
+                    <option value="22">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Gynécologie</font>
+                        </font>
+                    </option>
+                    <option value="27">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Département1</font>
+                        </font>
+                    </option>
+                    <option value="29">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Rayons X</font>
+                        </font>
+                    </option>
+                    <option value="30">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">contateur</font>
+                        </font>
+                    </option>
+                    <option value="36">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">ANDROSCOPIE</font>
+                        </font>
+                    </option>
+                    <option value="40">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Département Amit</font>
+                        </font>
+                    </option>
+                    <option value="41">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Dentaire</font>
+                        </font>
+                    </option>
+                    <option value="42">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Sony</font>
+                        </font>
+                    </option>
+                    <option value="50">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Ambulance</font>
+                        </font>
+                    </option>
+                    <option value="51">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Département de rayons X</font>
+                        </font>
+                    </option>
+                    <option value="52">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Chirurgical</font>
+                        </font>
+                    </option>
+                    <option value="53">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">NICU</font>
+                        </font>
+                    </option>
+                    <option value="54">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Nouveau médical</font>
+                        </font>
+                    </option>
+                    <option value="59">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Médicament</font>
+                        </font>
+                    </option>
+                    <option value="63">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Pharmacie</font>
+                        </font>
+                    </option>
+                    <option value="64">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">ruchi</font>
+                        </font>
+                    </option>
+                    <option value="65">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Laboratorio</font>
+                        </font>
+                    </option>
+                    <option value="66">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Architecte</font>
+                        </font>
+                    </option>
+                    <option value="67">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">L'amour</font>
+                        </font>
+                    </option>
+                    <option value="69">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Abdulmutalib Idris</font>
+                        </font>
+                    </option>
+                    <option value="71">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">spectre</font>
+                        </font>
+                    </option>
+                    <option value="72">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">skjsdklfjs</font>
+                        </font>
+                    </option>
+                    <option value="73">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Pilates</font>
+                        </font>
+                    </option>
+                    <option value="74">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">nefes egzersizleri</font>
+                        </font>
+                    </option>
+                    <option value="75">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">La finance</font>
+                        </font>
+                    </option>
+                    <option value="78">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Banque</font>
+                        </font>
+                    </option>
+                    <option value="80">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">greffe de cornée</font>
+                        </font>
+                    </option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                    style="width: 552.75px;"><span class="selection"><span
+                            class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="0" aria-labelledby="select2-department_id-container"><span
+                                class="select2-selection__rendered" id="select2-department_id-container"><span
+                                    class="select2-selection__placeholder">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Sélectionnez l'option</font>
+                                    </font>
+                                </span></span><span class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                        aria-hidden="true"></span></span>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="address" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Adresse </font>
+                </font><i class="text-danger">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">*</font>
+                    </font>
+                </i>
+            </label>
+            <div class="col-xs-9">
+                <textarea name="address" class="form-control" placeholder="Adresse" maxlength="140" rows="7"
+                    id="address"></textarea>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="phone" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Pas de téléphone</font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <input name="phone" class="form-control" type="number" placeholder="Pas de téléphone" id="phone" value="">
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="mobile" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Mobile Non </font>
+                </font><i class="text-danger">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">*</font>
+                    </font>
+                </i>
+            </label>
+            <div class="col-xs-9">
+                <input name="mobile" class="form-control" type="number" placeholder="Mobile Non" id="mobile" value="">
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="short_biography" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Courte biographie</font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <div id="mceu_17" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application"
+                    style="visibility: hidden; border-width: 1px;">
+                    <div id="mceu_17-body" class="mce-container-body mce-stack-layout">
+                        <div id="mceu_18" class="mce-container mce-menubar mce-toolbar mce-stack-layout-item mce-first"
+                            role="menubar" style="border-width: 0px 0px 1px;">
+                            <div id="mceu_18-body" class="mce-container-body mce-flow-layout">
+                                <div id="mceu_19"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-first mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_19" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_19-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Fichier</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_20"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_20" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_20-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Éditer</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_21"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_21" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_21-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Insérer</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_22"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_22" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_22-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Vue</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_23"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_23" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_23-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Format</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_24"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-last mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_24" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_24-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Table</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                            </div>
+                        </div>
+                        <div id="mceu_25" class="mce-toolbar-grp mce-container mce-panel mce-stack-layout-item"
+                            hidefocus="1" tabindex="-1" role="group">
+                            <div id="mceu_25-body" class="mce-container-body mce-stack-layout">
+                                <div id="mceu_26" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last"
+                                    role="toolbar">
+                                    <div id="mceu_26-body" class="mce-container-body mce-flow-layout">
+                                        <div id="mceu_27" class="mce-container mce-flow-layout-item mce-first mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_27-body">
+                                                <div id="mceu_0" class="mce-widget mce-btn mce-first mce-disabled"
+                                                    tabindex="-1" aria-labelledby="mceu_0" role="button"
+                                                    aria-label="annuler" aria-disabled="true"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-undo"></i></button></div>
+                                                <div id="mceu_1" class="mce-widget mce-btn mce-last mce-disabled"
+                                                    tabindex="-1" aria-labelledby="mceu_1" role="button"
+                                                    aria-label="Refaire" aria-disabled="true"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-redo"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_28" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_28-body">
+                                                <div id="mceu_2"
+                                                    class="mce-widget mce-btn mce-menubtn mce-first mce-last mce-btn-has-text"
+                                                    tabindex="-1" aria-labelledby="mceu_2" role="button"
+                                                    aria-haspopup="true"><button id="mceu_2-open" role="presentation"
+                                                        type="button" tabindex="-1"><span class="mce-txt">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">Formats</font>
+                                                            </font>
+                                                        </span> <i class="mce-caret"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_29" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_29-body">
+                                                <div id="mceu_3" class="mce-widget mce-btn mce-first" tabindex="-1"
+                                                    aria-labelledby="mceu_3" role="button" aria-label="Audacieux"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-bold"></i></button></div>
+                                                <div id="mceu_4" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_4" role="button" aria-label="Italique"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-italic"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_30" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_30-body">
+                                                <div id="mceu_5" class="mce-widget mce-btn mce-first" tabindex="-1"
+                                                    aria-labelledby="mceu_5" role="button" aria-label="Alignez à gauche">
+                                                    <button role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-alignleft"></i></button></div>
+                                                <div id="mceu_6" class="mce-widget mce-btn" tabindex="-1"
+                                                    aria-labelledby="mceu_6" role="button" aria-label="Aligner le centre">
+                                                    <button role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-aligncenter"></i></button></div>
+                                                <div id="mceu_7" class="mce-widget mce-btn" tabindex="-1"
+                                                    aria-labelledby="mceu_7" role="button" aria-label="Aligner à droite">
+                                                    <button role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-alignright"></i></button></div>
+                                                <div id="mceu_8" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_8" role="button" aria-label="Justifier"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-alignjustify"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_31" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_31-body">
+                                                <div id="mceu_9" class="mce-widget mce-btn mce-first" tabindex="-1"
+                                                    aria-labelledby="mceu_9" role="button"
+                                                    aria-label="Insérer / modifier le lien"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-link"></i></button></div>
+                                                <div id="mceu_10" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_10" role="button"
+                                                    aria-label="Insérer / modifier une image"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-image"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_32" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_32-body">
+                                                <div id="mceu_11" class="mce-widget mce-btn mce-first" tabindex="-1"
+                                                    aria-labelledby="mceu_11" role="button" aria-label="Impression"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-print"></i></button></div>
+                                                <div id="mceu_12" class="mce-widget mce-btn" tabindex="-1"
+                                                    aria-labelledby="mceu_12" role="button" aria-label="Aperçu"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-preview"></i></button></div>
+                                                <div id="mceu_13" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_13" role="button"
+                                                    aria-label="Insérer / éditer une vidéo"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-media"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_33" class="mce-container mce-flow-layout-item mce-last mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_33-body">
+                                                <div id="mceu_14" class="mce-widget mce-btn mce-colorbutton mce-first"
+                                                    role="button" tabindex="-1" aria-haspopup="true"
+                                                    aria-label="Couleur du texte"><button role="presentation" hidefocus="1"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-forecolor"></i><span id="mceu_14-preview"
+                                                            class="mce-preview"></span></button><button type="button"
+                                                        class="mce-open" hidefocus="1" tabindex="-1"> <i
+                                                            class="mce-caret"></i></button></div>
+                                                <div id="mceu_15" class="mce-widget mce-btn mce-colorbutton" role="button"
+                                                    tabindex="-1" aria-haspopup="true"
+                                                    aria-label="Couleur de l'arrière plan"><button role="presentation"
+                                                        hidefocus="1" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-backcolor"></i><span id="mceu_15-preview"
+                                                            class="mce-preview"></span></button><button type="button"
+                                                        class="mce-open" hidefocus="1" tabindex="-1"> <i
+                                                            class="mce-caret"></i></button></div>
+                                                <div id="mceu_16" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_16" role="button" aria-label="Émoticônes"
+                                                    aria-haspopup="true"><button role="presentation" type="button"
+                                                        tabindex="-1"><i class="mce-ico mce-i-emoticons"></i></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mceu_34" class="mce-edit-area mce-container mce-panel mce-stack-layout-item" hidefocus="1"
+                            tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><iframe id="short_biography_ifr"
+                                frameborder="0" allowtransparency="true"
+                                title="Zone de texte enrichi.  Appuyez sur ALT-F9 pour le menu.  Appuyez sur ALT-F10 pour la barre d'outils.  Appuyez sur ALT-0 pour obtenir de l'aide"
+                                src="javascript:&quot;&quot;" style="width: 100%; height: 150px; display: block;"></iframe>
+                        </div>
+                        <div id="mceu_35" class="mce-statusbar mce-container mce-panel mce-stack-layout-item mce-last"
+                            hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;">
+                            <div id="mceu_35-body" class="mce-container-body mce-flow-layout">
+                                <div id="mceu_36" class="mce-path mce-flow-layout-item mce-first">
+                                    <div role="button" class="mce-path-item mce-last" data-index="0" tabindex="-1"
+                                        id="mceu_36-0" aria-level="0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">p</font>
+                                        </font>
+                                    </div>
+                                </div><span id="mceu_76" class="mce-wordcount mce-widget mce-label mce-flow-layout-item">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Mots: 0</font>
+                                    </font>
+                                </span>
+                                <div id="mceu_37" class="mce-flow-layout-item mce-resizehandle mce-last"><i
+                                        class="mce-ico mce-i-resize"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><textarea name="short_biography" class="tinymce form-control" placeholder="Address"
+                    id="short_biography" maxlength="140" rows="7" style="display: none;" aria-hidden="true"></textarea>
+            </div>
+        </div>
+    
+    
+        <!-- if representative picture is already uploaded -->
+    
+        <div class="form-group row">
+            <label for="picture" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Image</font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <input type="file" name="picture" id="picture" value="">
+                <input type="hidden" name="old_picture" value="">
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="specialist" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Spécialiste</font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <input type="text" name="specialist" class="form-control" placeholder="Spécialiste" id="specialist"
+                    value="">
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="date_of_birth" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Date de naissance</font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <input name="date_of_birth" class="dropdown-month-years form-control hasDatepicker" type="text"
+                    placeholder="Date de naissance" id="date_of_birth" value="2020-12-18">
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label class="col-xs-3">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Sexe </font>
+                </font><i class="text-danger">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">*</font>
+                    </font>
+                </i>
+            </label>
+            <div class="col-xs-9">
+                <div class="form-check">
+                    <label class="radio-inline">
+                        <input type="radio" name="sex" value="Male" checked="&quot;checked&quot;">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Masculin </font>
+                        </font>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="sex" value="Female">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Femme </font>
+                        </font>
+                    </label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="blood_group" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Groupe sanguin</font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <select name="blood_group" class="form-control select2-hidden-accessible" id="blood_group" tabindex="-1"
+                    aria-hidden="true">
+                    <option value="" selected="selected">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Sélectionnez une option</font>
+                        </font>
+                    </option>
+                    <option value="A+">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">A +</font>
+                        </font>
+                    </option>
+                    <option value="A-">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">UNE-</font>
+                        </font>
+                    </option>
+                    <option value="B+">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">B +</font>
+                        </font>
+                    </option>
+                    <option value="B-">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">B-</font>
+                        </font>
+                    </option>
+                    <option value="O+">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">O +</font>
+                        </font>
+                    </option>
+                    <option value="O-">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">O-</font>
+                        </font>
+                    </option>
+                    <option value="AB+">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">AB +</font>
+                        </font>
+                    </option>
+                    <option value="AB-">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">UN B-</font>
+                        </font>
+                    </option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                    style="width: 552.75px;"><span class="selection"><span
+                            class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="0" aria-labelledby="select2-blood_group-container"><span
+                                class="select2-selection__rendered" id="select2-blood_group-container"><span
+                                    class="select2-selection__placeholder">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Sélectionnez l'option</font>
+                                    </font>
+                                </span></span><span class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                        aria-hidden="true"></span></span>
+            </div>
+        </div>
+    
+    
+        <div class="form-group row">
+            <label for="degree" class="col-xs-3 col-form-label">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Niveau d'étude</font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <div id="mceu_55" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application"
+                    style="visibility: hidden; border-width: 1px;">
+                    <div id="mceu_55-body" class="mce-container-body mce-stack-layout">
+                        <div id="mceu_56" class="mce-container mce-menubar mce-toolbar mce-stack-layout-item mce-first"
+                            role="menubar" style="border-width: 0px 0px 1px;">
+                            <div id="mceu_56-body" class="mce-container-body mce-flow-layout">
+                                <div id="mceu_57"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-first mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_57" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_57-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Fichier</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_58"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_58" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_58-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Éditer</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_59"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_59" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_59-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Insérer</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_60"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_60" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_60-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Vue</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_61"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_61" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_61-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Format</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                                <div id="mceu_62"
+                                    class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-last mce-btn-has-text"
+                                    tabindex="-1" aria-labelledby="mceu_62" role="menuitem" aria-haspopup="true"><button
+                                        id="mceu_62-open" role="presentation" type="button" tabindex="-1"><span
+                                            class="mce-txt">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Table</font>
+                                            </font>
+                                        </span> <i class="mce-caret"></i></button></div>
+                            </div>
+                        </div>
+                        <div id="mceu_63" class="mce-toolbar-grp mce-container mce-panel mce-stack-layout-item"
+                            hidefocus="1" tabindex="-1" role="group">
+                            <div id="mceu_63-body" class="mce-container-body mce-stack-layout">
+                                <div id="mceu_64" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last"
+                                    role="toolbar">
+                                    <div id="mceu_64-body" class="mce-container-body mce-flow-layout">
+                                        <div id="mceu_65" class="mce-container mce-flow-layout-item mce-first mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_65-body">
+                                                <div id="mceu_38" class="mce-widget mce-btn mce-first mce-disabled"
+                                                    tabindex="-1" aria-labelledby="mceu_38" role="button"
+                                                    aria-label="annuler" aria-disabled="true"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-undo"></i></button></div>
+                                                <div id="mceu_39" class="mce-widget mce-btn mce-last mce-disabled"
+                                                    tabindex="-1" aria-labelledby="mceu_39" role="button"
+                                                    aria-label="Refaire" aria-disabled="true"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-redo"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_66" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_66-body">
+                                                <div id="mceu_40"
+                                                    class="mce-widget mce-btn mce-menubtn mce-first mce-last mce-btn-has-text"
+                                                    tabindex="-1" aria-labelledby="mceu_40" role="button"
+                                                    aria-haspopup="true"><button id="mceu_40-open" role="presentation"
+                                                        type="button" tabindex="-1"><span class="mce-txt">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">Formats</font>
+                                                            </font>
+                                                        </span> <i class="mce-caret"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_67" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_67-body">
+                                                <div id="mceu_41" class="mce-widget mce-btn mce-first" tabindex="-1"
+                                                    aria-labelledby="mceu_41" role="button" aria-label="Audacieux"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-bold"></i></button></div>
+                                                <div id="mceu_42" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_42" role="button" aria-label="Italique"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-italic"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_68" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_68-body">
+                                                <div id="mceu_43" class="mce-widget mce-btn mce-first" tabindex="-1"
+                                                    aria-labelledby="mceu_43" role="button" aria-label="Alignez à gauche">
+                                                    <button role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-alignleft"></i></button></div>
+                                                <div id="mceu_44" class="mce-widget mce-btn" tabindex="-1"
+                                                    aria-labelledby="mceu_44" role="button" aria-label="Aligner le centre">
+                                                    <button role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-aligncenter"></i></button></div>
+                                                <div id="mceu_45" class="mce-widget mce-btn" tabindex="-1"
+                                                    aria-labelledby="mceu_45" role="button" aria-label="Aligner à droite">
+                                                    <button role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-alignright"></i></button></div>
+                                                <div id="mceu_46" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_46" role="button" aria-label="Justifier"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-alignjustify"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_69" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_69-body">
+                                                <div id="mceu_47" class="mce-widget mce-btn mce-first" tabindex="-1"
+                                                    aria-labelledby="mceu_47" role="button"
+                                                    aria-label="Insérer / modifier le lien"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-link"></i></button></div>
+                                                <div id="mceu_48" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_48" role="button"
+                                                    aria-label="Insérer / modifier une image"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-image"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_70" class="mce-container mce-flow-layout-item mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_70-body">
+                                                <div id="mceu_49" class="mce-widget mce-btn mce-first" tabindex="-1"
+                                                    aria-labelledby="mceu_49" role="button" aria-label="Impression"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-print"></i></button></div>
+                                                <div id="mceu_50" class="mce-widget mce-btn" tabindex="-1"
+                                                    aria-labelledby="mceu_50" role="button" aria-label="Aperçu"><button
+                                                        role="presentation" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-preview"></i></button></div>
+                                                <div id="mceu_51" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_51" role="button"
+                                                    aria-label="Insérer / éditer une vidéo"><button role="presentation"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-media"></i></button></div>
+                                            </div>
+                                        </div>
+                                        <div id="mceu_71" class="mce-container mce-flow-layout-item mce-last mce-btn-group"
+                                            role="group">
+                                            <div id="mceu_71-body">
+                                                <div id="mceu_52" class="mce-widget mce-btn mce-colorbutton mce-first"
+                                                    role="button" tabindex="-1" aria-haspopup="true"
+                                                    aria-label="Couleur du texte"><button role="presentation" hidefocus="1"
+                                                        type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-forecolor"></i><span id="mceu_52-preview"
+                                                            class="mce-preview"></span></button><button type="button"
+                                                        class="mce-open" hidefocus="1" tabindex="-1"> <i
+                                                            class="mce-caret"></i></button></div>
+                                                <div id="mceu_53" class="mce-widget mce-btn mce-colorbutton" role="button"
+                                                    tabindex="-1" aria-haspopup="true"
+                                                    aria-label="Couleur de l'arrière plan"><button role="presentation"
+                                                        hidefocus="1" type="button" tabindex="-1"><i
+                                                            class="mce-ico mce-i-backcolor"></i><span id="mceu_53-preview"
+                                                            class="mce-preview"></span></button><button type="button"
+                                                        class="mce-open" hidefocus="1" tabindex="-1"> <i
+                                                            class="mce-caret"></i></button></div>
+                                                <div id="mceu_54" class="mce-widget mce-btn mce-last" tabindex="-1"
+                                                    aria-labelledby="mceu_54" role="button" aria-label="Émoticônes"
+                                                    aria-haspopup="true"><button role="presentation" type="button"
+                                                        tabindex="-1"><i class="mce-ico mce-i-emoticons"></i></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mceu_72" class="mce-edit-area mce-container mce-panel mce-stack-layout-item" hidefocus="1"
+                            tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><iframe id="degree_ifr"
+                                frameborder="0" allowtransparency="true"
+                                title="Zone de texte enrichi.  Appuyez sur ALT-F9 pour le menu.  Appuyez sur ALT-F10 pour la barre d'outils.  Appuyez sur ALT-0 pour obtenir de l'aide"
+                                src="javascript:&quot;&quot;" style="width: 100%; height: 150px; display: block;"></iframe>
+                        </div>
+                        <div id="mceu_73" class="mce-statusbar mce-container mce-panel mce-stack-layout-item mce-last"
+                            hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;">
+                            <div id="mceu_73-body" class="mce-container-body mce-flow-layout">
+                                <div id="mceu_74" class="mce-path mce-flow-layout-item mce-first">
+                                    <div role="button" class="mce-path-item mce-last" data-index="0" tabindex="-1"
+                                        id="mceu_74-0" aria-level="0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">p</font>
+                                        </font>
+                                    </div>
+                                </div><span id="mceu_77" class="mce-wordcount mce-widget mce-label mce-flow-layout-item">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Mots: 0</font>
+                                    </font>
+                                </span>
+                                <div id="mceu_75" class="mce-flow-layout-item mce-resizehandle mce-last"><i
+                                        class="mce-ico mce-i-resize"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><textarea name="degree" class="tinymce form-control" placeholder="Education/Degree" id="degree"
+                    maxlength="140" rows="7" style="display: none;" aria-hidden="true"></textarea>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label class="col-xs-3">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Statut</font>
+                </font>
+            </label>
+            <div class="col-xs-9">
+                <div class="form-check">
+                    <label class="radio-inline">
+                        <input type="radio" name="status" value="1" checked="&quot;checked&quot;">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">actif </font>
+                        </font>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="status" value="0">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Inactif </font>
+                        </font>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-offset-3 col-sm-6">
+                <div class="ui buttons">
+                    <button type="reset" class="ui button">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Réinitialiser</font>
+                        </font>
+                    </button>
+                    <div class="or"></div>
+                    <button class="ui positive button">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">sauver</font>
+                        </font>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+  

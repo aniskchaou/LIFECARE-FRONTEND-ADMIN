@@ -46,6 +46,25 @@ import { AddServiceComponent } from './modules/service/add-service/add-service.c
 import { ServiceComponent } from './modules/service/service/service.component';
 import { HeaderComponent } from './template/header/header.component';
 import { NavigationComponent } from './template/navigation/navigation.component';
+import { EditAccountComponent } from './edit-account/edit-account.component';
+import { EditRendezvousComponent } from './edit-rendezvous/edit-rendezvous.component';
+import { EditServiceComponent } from './edit-service/edit-service.component';
+import { EditScheduleComponent } from './edit-schedule/edit-schedule.component';
+import { EditPrescriptionComponent } from './edit-prescription/edit-prescription.component';
+import { EditPatientComponent } from './edit-patient/edit-patient.component';
+import { EditMedicamentComponent } from './edit-medicament/edit-medicament.component';
+import { AddMedicamentComponent } from './add-medicament/add-medicament.component';
+import { EditInvoiceComponent } from './edit-invoice/edit-invoice.component';
+import { EditInsuranceComponent } from './edit-insurance/edit-insurance.component';
+import { EditDocumentComponent } from './edit-document/edit-document.component';
+import { EditMedecinComponent } from './edit-medecin/edit-medecin.component';
+import { EditCategoryComponent } from './edit-category/edit-category.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
+import { EditDepartementComponent } from './edit-departement/edit-departement.component';
+import { ViewDoctorComponent } from './view-doctor/view-doctor.component';
+import { ViewPatientComponent } from './view-patient/view-patient.component';
+import { ViewPrescriptionComponent } from './view-prescription/view-prescription.component';
 
 
 const routes:Routes=[
@@ -62,6 +81,7 @@ const routes:Routes=[
   {path:'departement',component:DepartementComponent},
   {path:'adddepartement',component:AddDepartementComponent},
   {path:'document',component:DocumentComponent},
+  {path:'adddocument',component:AddDocumentComponent},
   {path:'insurance',component:InsuranceComponent},
   {path:'laboratory',component:LaboratoryComponent},
   {path:'insurance',component:InsuranceComponent},
@@ -75,11 +95,13 @@ const routes:Routes=[
   {path:'patient',component:PatientComponent},
   {path:'addpatient',component:AddPatientComponent},
   {path:'payment',component:PaymentComponent},
-  {path:'pharmasist',component:PharmasistComponent},
+  {path:'pharmacist',component:PharmasistComponent},
   {path:'prescription',component:PrescriptionComponent},
+  {path:'addprescription',component:AddPrescriptionComponent},
   {path:'program',component:ProgramComponent},
   {path:'receptionist',component:RecepionistComponent},
   {path:'rendezvous',component:RendezVousComponent},
+  {path:'addemployee',component:AddEmployeeComponent},
   {path:'addrendezvous',component:AddAppointmentComponent},
   {path:'login',component:LoginComponent},
   {path:'configuration',component:ConfigurationComponent},
@@ -130,7 +152,26 @@ const routes:Routes=[
     AddPaymentComponent,
     AddInsuranceComponent,
     AddServiceComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    EditAccountComponent,
+    EditRendezvousComponent,
+    EditServiceComponent,
+    EditScheduleComponent,
+    EditPrescriptionComponent,
+    EditPatientComponent,
+    EditMedicamentComponent,
+    AddMedicamentComponent,
+    EditInvoiceComponent,
+    EditInsuranceComponent,
+    EditDocumentComponent,
+    EditMedecinComponent,
+    EditCategoryComponent,
+    AddCategoryComponent,
+    EditEmployeeComponent,
+    EditDepartementComponent,
+    ViewDoctorComponent,
+    ViewPatientComponent,
+    ViewPrescriptionComponent
   ],
   imports: [
     BrowserModule,
