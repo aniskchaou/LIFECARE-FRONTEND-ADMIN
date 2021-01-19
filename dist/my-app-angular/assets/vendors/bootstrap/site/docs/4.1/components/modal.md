@@ -46,7 +46,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+             
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@ Below is a _static_ modal example (meaning its `position` and `display` have bee
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+           
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+           
       </div>
     </div>
   </div>
@@ -126,7 +126,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+           
       </div>
     </div>
   </div>
@@ -168,7 +168,7 @@ When modals become too long for the user's viewport or device, they scroll indep
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+           
       </div>
     </div>
   </div>
@@ -201,7 +201,7 @@ When modals become too long for the user's viewport or device, they scroll indep
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+           
       </div>
     </div>
   </div>
@@ -226,7 +226,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+           
       </div>
     </div>
   </div>
@@ -259,7 +259,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+           
       </div>
     </div>
   </div>
@@ -288,7 +288,7 @@ Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+           
       </div>
     </div>
   </div>
@@ -351,7 +351,7 @@ Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` w
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+           
       </div>
     </div>
   </div>
