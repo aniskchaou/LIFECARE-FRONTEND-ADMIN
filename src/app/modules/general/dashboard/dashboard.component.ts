@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js';
+import { URLLoader } from 'src/app/configs/URLLoader';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent extends URLLoader implements OnInit {
 
-  constructor() { }
+  constructor() { super() }
 
   ngOnInit(): void {
    
@@ -18,7 +19,8 @@ export class DashboardComponent implements OnInit {
     var ctx1 = document.getElementsByClassName("revenue-chart");
     var ctx2 = document.getElementsByClassName("patient-chart");
     this.renderChart(data, labels,ctx1,'rgba(67, 255, 15, 1)');
-    this.renderChart(data2, labels,ctx2,'rgba(0, 90, 224, 1)');
+    this.renderChart(data2, labels, ctx2, 'rgba(0, 90, 224, 1)');
+    super.show('Life care', 'Cette application est en cours de développment.', 'info')
   }
 
 
