@@ -46,67 +46,53 @@ import { AddServiceComponent } from './modules/service/add-service/add-service.c
 import { ServiceComponent } from './modules/service/service/service.component';
 import { HeaderComponent } from './template/header/header.component';
 import { NavigationComponent } from './template/navigation/navigation.component';
-import { EditAccountComponent } from './edit-account/edit-account.component';
-import { EditRendezvousComponent } from './edit-rendezvous/edit-rendezvous.component';
-import { EditServiceComponent } from './edit-service/edit-service.component';
-import { EditScheduleComponent } from './edit-schedule/edit-schedule.component';
-import { EditPrescriptionComponent } from './edit-prescription/edit-prescription.component';
-import { EditPatientComponent } from './edit-patient/edit-patient.component';
-import { EditMedicamentComponent } from './edit-medicament/edit-medicament.component';
-import { AddMedicamentComponent } from './add-medicament/add-medicament.component';
-import { EditInvoiceComponent } from './edit-invoice/edit-invoice.component';
-import { EditInsuranceComponent } from './edit-insurance/edit-insurance.component';
-import { EditDocumentComponent } from './edit-document/edit-document.component';
-import { EditMedecinComponent } from './edit-medecin/edit-medecin.component';
-import { EditCategoryComponent } from './edit-category/edit-category.component';
-import { AddCategoryComponent } from './add-category/add-category.component';
-import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
-import { EditDepartementComponent } from './edit-departement/edit-departement.component';
+
 import { ViewDoctorComponent } from './view-doctor/view-doctor.component';
 import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { ViewPrescriptionComponent } from './view-prescription/view-prescription.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-const routes:Routes=[
-  {path:'invoice',component:InvoiceComponent},
-  {path:'addinvoice',component:AddInvoiceComponent},
-  {path:'dashboard',component:DashboardComponent},
-  {path:'service',component:ServiceComponent},
-  {path:'addservice',component:AddServiceComponent},
-  {path:'accountant',component:AccountantComponent},
-  {path:'birth',component:BirthdayComponent},
-  {path:'category',component:CategorieComponent},
-  {path:'dead',component:DeadComponent},
-  {path:'medicament',component:MedicamentComponent},
-  {path:'departement',component:DepartementComponent},
-  {path:'adddepartement',component:AddDepartementComponent},
-  {path:'document',component:DocumentComponent},
-  {path:'adddocument',component:AddDocumentComponent},
-  {path:'insurance',component:InsuranceComponent},
-  {path:'laboratory',component:LaboratoryComponent},
-  {path:'insurance',component:InsuranceComponent},
-  {path:'addinsurance',component:AddInsuranceComponent},
-  {path:'adddoctor',component:AddDoctorComponent},
-  {path:'doctor',component:MedecinComponent},
-  {path:'medicament',component:MedicamentComponent},
-  {path:'addmedicament',component:MedecinComponent},
-  {path:'nurse',component:NurseComponent},
-  {path:'operator',component:OperatorComponent},
-  {path:'patient',component:PatientComponent},
-  {path:'addpatient',component:AddPatientComponent},
-  {path:'payment',component:PaymentComponent},
-  {path:'pharmacist',component:PharmasistComponent},
-  {path:'prescription',component:PrescriptionComponent},
-  {path:'addprescription',component:AddPrescriptionComponent},
-  {path:'program',component:ProgramComponent},
-  {path:'receptionist',component:RecepionistComponent},
-  {path:'rendezvous',component:RendezVousComponent},
-  {path:'addemployee',component:AddEmployeeComponent},
-  {path:'addrendezvous',component:AddAppointmentComponent},
-  {path:'login',component:LoginComponent},
-  {path:'configuration',component:ConfigurationComponent},
-  {path:'',redirectTo:'login',pathMatch:'full'},
-  {path:'**',redirectTo:'login',pathMatch:'full'}]
+const routes: Routes = [
+  { path: 'invoice', component: InvoiceComponent },
+  { path: 'addinvoice', component: AddInvoiceComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'service', component: ServiceComponent },
+  { path: 'addservice', component: AddServiceComponent },
+  { path: 'accountant', component: AccountantComponent },
+  { path: 'birth', component: BirthdayComponent },
+  { path: 'category', component: CategorieComponent },
+  { path: 'dead', component: DeadComponent },
+  { path: 'medicament', component: MedicamentComponent },
+  { path: 'departement', component: DepartementComponent },
+  { path: 'adddepartement', component: AddDepartementComponent },
+  { path: 'document', component: DocumentComponent },
+  { path: 'adddocument', component: AddDocumentComponent },
+  { path: 'insurance', component: InsuranceComponent },
+  { path: 'laboratory', component: LaboratoryComponent },
+  { path: 'insurance', component: InsuranceComponent },
+  { path: 'addinsurance', component: AddInsuranceComponent },
+  { path: 'adddoctor', component: AddDoctorComponent },
+  { path: 'doctor', component: MedecinComponent },
+  { path: 'medicament', component: MedicamentComponent },
+  { path: 'addmedicament', component: MedecinComponent },
+  { path: 'nurse', component: NurseComponent },
+  { path: 'operator', component: OperatorComponent },
+  { path: 'patient', component: PatientComponent },
+  { path: 'addpatient', component: AddPatientComponent },
+  { path: 'payment', component: PaymentComponent },
+  { path: 'pharmacist', component: PharmasistComponent },
+  { path: 'prescription', component: PrescriptionComponent },
+  { path: 'addprescription', component: AddPrescriptionComponent },
+  { path: 'program', component: ProgramComponent },
+  { path: 'receptionist', component: RecepionistComponent },
+  { path: 'rendezvous', component: RendezVousComponent },
+  { path: 'addemployee', component: AddEmployeeComponent },
+  { path: 'addrendezvous', component: AddAppointmentComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'configuration', component: ConfigurationComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login', pathMatch: 'full' }]
 
 
 @NgModule({
@@ -153,31 +139,25 @@ const routes:Routes=[
     AddInsuranceComponent,
     AddServiceComponent,
     AddEmployeeComponent,
-    EditAccountComponent,
-    EditRendezvousComponent,
-    EditServiceComponent,
-    EditScheduleComponent,
-    EditPrescriptionComponent,
-    EditPatientComponent,
-    EditMedicamentComponent,
-    AddMedicamentComponent,
-    EditInvoiceComponent,
-    EditInsuranceComponent,
-    EditDocumentComponent,
-    EditMedecinComponent,
-    EditCategoryComponent,
-    AddCategoryComponent,
-    EditEmployeeComponent,
-    EditDepartementComponent,
+    AddAccountComponent,
+    AddServiceComponent,
+    AddScheduleComponent,
+    AddPrescriptionComponent,
+    AddPatientComponent,
+    AddDocumentComponent,
+    AddInvoiceComponent,
+    AddInsuranceComponent,
     ViewDoctorComponent,
     ViewPatientComponent,
     ViewPrescriptionComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [{provide: APP_BASE_HREF, useValue: ''}],
+  providers: [{ provide: APP_BASE_HREF, useValue: '' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

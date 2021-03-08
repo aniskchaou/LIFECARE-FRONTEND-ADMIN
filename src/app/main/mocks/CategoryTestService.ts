@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 import Service from "../interfaces/Service";
 
 @Injectable({
     providedIn: 'root'
 })
 export default class CategoryTestService implements Service {
-
+    public ID = new BehaviorSubject<string>(null);
     _buy = []
     static id = 0
 

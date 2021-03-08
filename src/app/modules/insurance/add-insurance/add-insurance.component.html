@@ -3,9 +3,10 @@
         <strong class="card-title">Nouveau</strong>
     </div>
     <div class="card-body">
-        <form action="https://hospitalnew.bdtask.com/demo7/insurance/insurance/form" enctype="multipart/form-data"
-            method="post" accept-charset="utf-8">
-            <input type="hidden" name="csrf_stream_token" value="2f8edb916b1acaf6aa9af44ca4c08f57">
+        <form enctype="multipart/form-data" [formGroup]="insuranceForm" method="post" accept-charset="utf-8">
+
+
+
             <div class="form-group row">
                 <label for="insurance_name" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -18,9 +19,17 @@
                 </label>
                 <div class="col-xs-9">
                     <input name="insurance_name" type="text" class="form-control" id="insurance_name"
-                        placeholder="Nom de l'assurance" value="">
+                        [ngClass]="{ 'is-invalid': submitted && f.insurance_name.errors }"
+                        formControlName="insurance_name" placeholder="Nom de l'assurance" value="">
+
+                    <div *ngIf="submitted && f.insurance_name.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.insurance_name.errors.required">
+                            {{msg.validationMessage.insurance_name}}</div>
+                    </div>
                 </div>
             </div>
+
+
 
             <div class="form-group row">
                 <label for="service_tax" class="col-xs-3 col-form-label">
@@ -30,9 +39,17 @@
                 </label>
                 <div class="col-xs-9">
                     <input name="service_tax" type="number" class="form-control" id="service_tax"
+                        [ngClass]="{ 'is-invalid': submitted && f.service_tax.errors }" formControlName="service_tax"
                         placeholder="Taxe de service" value="">
+
+                    <div *ngIf="submitted && f.service_tax.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.service_tax.errors.required">
+                            {{msg.validationMessage.service_tax}}</div>
+                    </div>
                 </div>
             </div>
+
+
 
             <div class="form-group row">
                 <label for="discount" class="col-xs-3 col-form-label">
@@ -41,10 +58,18 @@
                     </font>
                 </label>
                 <div class="col-xs-9">
-                    <input name="discount" type="number" class="form-control" id="discount" placeholder="Remise"
-                        value="">
+                    <input name="discount" type="number" class="form-control" id="discount"
+                        [ngClass]="{ 'is-invalid': submitted && f.discount.errors }" formControlName="discount"
+                        placeholder="Remise" value="">
+
+                    <div *ngIf="submitted && f.discount.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.discount.errors.required">
+                            {{msg.validationMessage.discount}}</div>
+                    </div>
                 </div>
             </div>
+
+
 
             <div class="form-group row">
                 <label for="remark" class="col-xs-3 col-form-label">
@@ -53,9 +78,18 @@
                     </font>
                 </label>
                 <div class="col-xs-9">
-                    <textarea name="remark" class="form-control" placeholder="Remarque" rows="7"></textarea>
+                    <textarea name="remark" class="form-control" placeholder="Remarque"
+                        [ngClass]="{ 'is-invalid': submitted && f.remark.errors }" formControlName="remark"
+                        rows="7"></textarea>
+
+                    <div *ngIf="submitted && f.remark.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.remark.errors.required">
+                            {{msg.validationMessage.remark}}</div>
+                    </div>
                 </div>
             </div>
+
+
 
             <div class="form-group row">
                 <label for="insurance_no" class="col-xs-3 col-form-label">
@@ -65,9 +99,16 @@
                 </label>
                 <div class="col-xs-9">
                     <input name="insurance_no" type="text" class="form-control" id="insurance_no"
+                        [ngClass]="{ 'is-invalid': submitted && f.insurance_no.errors }" formControlName="insurance_no"
                         placeholder="N ° d'assurance" value="">
+
+                    <div *ngIf="submitted && f.insurance_no.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.insurance_no.errors.required">
+                            {{msg.validationMessage.insurance_no}}</div>
+                    </div>
                 </div>
             </div>
+
 
             <div class="form-group row">
                 <label for="insurance_code" class="col-xs-3 col-form-label">
@@ -77,9 +118,16 @@
                 </label>
                 <div class="col-xs-9">
                     <input name="insurance_code" type="text" class="form-control" id="insurance_code"
-                        placeholder="Code des assurances" value="">
+                        [ngClass]="{ 'is-invalid': submitted && f.insurance_code.errors }"
+                        formControlName="insurance_code" placeholder="Code des assurances" value="">
+
+                    <div *ngIf="submitted && f.insurance_code.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.insurance_code.errors.required">
+                            {{msg.validationMessage.insurance_code}}</div>
+                    </div>
                 </div>
             </div>
+
 
             <div class="form-group row">
                 <label for="disease_charge" class="col-xs-3 col-form-label">
@@ -90,11 +138,11 @@
                 <div class="col-xs-9" id="disease_charge">
                     <div class="row">
                         <div class="col-xs-4">
-                            <input name="disease_name[]" type="text" class="form-control"
-                                placeholder="Nom de la maladie" value="">
+                            <input name="disease_name" type="text" class="form-control" placeholder="Nom de la maladie"
+                                value="">
                         </div>
                         <div class="col-xs-4">
-                            <input name="disease_charge[]" type="number" class="form-control"
+                            <input name="disease_charge" type="number" class="form-control"
                                 placeholder="Charge de maladie" value="">
                         </div>
                         <div class="col-xs-4">
@@ -115,6 +163,7 @@
                 </div>
             </div>
 
+
             <div class="form-group row">
                 <label for="hospital_rate" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -123,9 +172,16 @@
                 </label>
                 <div class="col-xs-9">
                     <input name="hospital_rate" type="number" class="form-control" id="hospital_rate"
-                        placeholder="Tarif hospitalier" value="">
+                        [ngClass]="{ 'is-invalid': submitted && f.hospital_rate.errors }"
+                        formControlName="hospital_rate" placeholder="Tarif hospitalier" value="">
+
+                    <div *ngIf="submitted && f.hospital_rate.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.hospital_rate.errors.required">
+                            {{msg.validationMessage.hospital_rate}}</div>
+                    </div>
                 </div>
             </div>
+
 
             <div class="form-group row">
                 <label for="insurance_rate" class="col-xs-3 col-form-label">
@@ -135,7 +191,13 @@
                 </label>
                 <div class="col-xs-9">
                     <input name="insurance_rate" type="number" class="form-control" id="insurance_rate"
-                        placeholder="Taux d'assurance" value="">
+                        [ngClass]="{ 'is-invalid': submitted && f.insurance_rate.errors }"
+                        formControlName="insurance_rate" placeholder="Taux d'assurance" value="">
+
+                    <div *ngIf="submitted && f.insurance_rate.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.insurance_rate.errors.required">
+                            {{msg.validationMessage.insurance_rate}}</div>
+                    </div>
                 </div>
             </div>
 
@@ -146,7 +208,13 @@
                     </font>
                 </label>
                 <div class="col-xs-9">
-                    <input name="total" type="number" class="form-control" id="total" placeholder="Total" value="">
+                    <input name="total" type="number" class="form-control" id="total" placeholder="Total"
+                        [ngClass]="{ 'is-invalid': submitted && f.total.errors }" formControlName="total" value="">
+
+                    <div *ngIf="submitted && f.total.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.total.errors.required">
+                            {{msg.validationMessage.total}}</div>
+                    </div>
                 </div>
             </div>
 
@@ -187,7 +255,7 @@
                             </font>
                         </button>
                         <div class="or"></div>
-                        <button class="btn btn-success">
+                        <button (click)="add()" class="btn btn-success">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Sauvegarder</font>
                             </font>

@@ -3,12 +3,7 @@
         <strong class="card-title">Nouveau</strong>
     </div>
     <div class="card-body">
-        <form action="https://hospitalnew.bdtask.com/demo7/account_manager/payment/create" class="form-inner"
-            method="post" accept-charset="utf-8">
-            <input type="hidden" name="csrf_stream_token" value="2f8edb916b1acaf6aa9af44ca4c08f57">
-
-
-            <input type="hidden" name="id" value="">
+        <form class="form-inner" [formGroup]="paymentForm" method="post" accept-charset="utf-8">
 
             <div class="form-group row">
                 <label for="date" class="col-xs-3 col-form-label">
@@ -25,6 +20,8 @@
                         placeholder="Date" value="2020-12-18">
                 </div>
             </div>
+
+
 
             <div class="form-group row">
                 <label for="account_name" class="col-xs-3 col-form-label">
@@ -59,49 +56,8 @@
                                 <font style="vertical-align: inherit;">Dépenses</font>
                             </font>
                         </option>
-                        <option value="6">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Gagner des rayons X</font>
-                            </font>
-                        </option>
-                        <option value="7">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Ajinkya</font>
-                            </font>
-                        </option>
-                        <option value="17">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">0697</font>
-                            </font>
-                        </option>
-                        <option value="19">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">lit 1</font>
-                            </font>
-                        </option>
-                        <option value="23">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Aashish</font>
-                            </font>
-                        </option>
-                        <option value="24">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">fferege</font>
-                            </font>
-                        </option>
-                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                        style="width: 552.75px;"><span class="selection"><span
-                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
-                                aria-expanded="false" tabindex="0"
-                                aria-labelledby="select2-account_name-container"><span
-                                    class="select2-selection__rendered" id="select2-account_name-container"><span
-                                        class="select2-selection__placeholder">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Sélectionnez l'option</font>
-                                        </font>
-                                    </span></span><span class="select2-selection__arrow" role="presentation"><b
-                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                            aria-hidden="true"></span></span>
+
+                    </select>
                 </div>
             </div>
 
@@ -169,6 +125,7 @@
                 </div>
             </div>
 
+
             <div class="form-group row">
                 <div class="  ">
                     <div class="btn btn-primarys">
@@ -178,7 +135,7 @@
                             </font>
                         </button>
                         <div class="or"></div>
-                        <button class="btn btn-success">
+                        <button (click)="add()" class="btn btn-success">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Sauvegarder</font>
                             </font>

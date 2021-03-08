@@ -3,25 +3,36 @@
         <strong class="card-title">Nouveau</strong>
     </div>
     <div class="card-body">
-        <form class="form-inner" method="post" accept-charset="utf-8">
-            <input type="hidden" name="csrf_stream_token" value="54d9acfde70440daf2e8f376c5d7e2b9">
+        <form class="form-inner" method="post" accept-charset="utf-8" [formGroup]="appointementForm">
 
             <div class="form-group row">
                 <label for="patient_id" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">ID du patient </font>
+                        <font style="vertical-align: inherit;">Nom de patient </font>
                     </font><i class="text-danger">
                         <font style="vertical-align: inherit;">
                             <font style="vertical-align: inherit;">*</font>
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
-                    <input name="patient_id" autocomplete="off" type="text" class="form-control" id="patient_id"
-                        placeholder="ID du patient" value="">
+                <div class="col-md-6">
+                    <select nput name="patient_id" autocomplete="off" type="text"
+                        [ngClass]="{ 'is-invalid': submitted && f.patient_id.errors }" formControlName="patient_id"
+                        class="form-control" id="patient_id" placeholder="ID du patient">
+                        <option value=" John Doe">
+                            John Doe
+                        </option>
+                    </select>
+
+                    <div *ngIf="submitted && f.patient_id.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.patient_id.errors.required">
+                            {{msg.validationMessage.patient_id}}</div>
+                    </div>
                     <span></span>
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <label for="department_id" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -32,245 +43,35 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
-                    <select name="department_id" class="form-control select2-hidden-accessible" id="department_id"
-                        tabindex="-1" aria-hidden="true">
-                        <option value="" selected="selected">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Sélectionnez un département</font>
-                            </font>
-                        </option>
-                        <option value="13">
+                <div class="col-md-6">
+                    <select name="departement_id" class="form-control select2-hidden-accessible"
+                        [ngClass]="{ 'is-invalid': submitted && f.departement_id.errors }"
+                        formControlName="departement_id" id="departement_id" tabindex="-1" aria-hidden="true">
+
+                        <option value="Néonatale">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Néonatale</font>
                             </font>
                         </option>
-                        <option value="14">
+                        <option value="Néphrologie">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Néphrologie</font>
                             </font>
                         </option>
-                        <option value="15">
+                        <option value="Neurologie">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Neurologie</font>
                             </font>
                         </option>
-                        <option value="16">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Oncologie</font>
-                            </font>
-                        </option>
-                        <option value="18">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Pharmacie</font>
-                            </font>
-                        </option>
-                        <option value="19">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Radiothérapie</font>
-                            </font>
-                        </option>
-                        <option value="22">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Gynécologie</font>
-                            </font>
-                        </option>
-                        <option value="27">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Département1</font>
-                            </font>
-                        </option>
-                        <option value="29">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Rayons X</font>
-                            </font>
-                        </option>
-                        <option value="30">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">contateur</font>
-                            </font>
-                        </option>
-                        <option value="36">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">ANDROSCOPIE</font>
-                            </font>
-                        </option>
-                        <option value="40">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Département Amit</font>
-                            </font>
-                        </option>
-                        <option value="41">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Dentaire</font>
-                            </font>
-                        </option>
-                        <option value="42">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Sony</font>
-                            </font>
-                        </option>
-                        <option value="50">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Ambulance</font>
-                            </font>
-                        </option>
-                        <option value="51">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Département de rayons X</font>
-                            </font>
-                        </option>
-                        <option value="52">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Chirurgical</font>
-                            </font>
-                        </option>
-                        <option value="53">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">NICU</font>
-                            </font>
-                        </option>
-                        <option value="54">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Nouveau médical</font>
-                            </font>
-                        </option>
-                        <option value="59">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Médicament</font>
-                            </font>
-                        </option>
-                        <option value="63">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Pharmacie</font>
-                            </font>
-                        </option>
-                        <option value="64">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">ruchi</font>
-                            </font>
-                        </option>
-                        <option value="65">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Laboratorio</font>
-                            </font>
-                        </option>
-                        <option value="66">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Architecte</font>
-                            </font>
-                        </option>
-                        <option value="67">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">L'amour</font>
-                            </font>
-                        </option>
-                        <option value="69">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Abdulmutalib Idris</font>
-                            </font>
-                        </option>
-                        <option value="71">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">spectre</font>
-                            </font>
-                        </option>
-                        <option value="72">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">skjsdklfjs</font>
-                            </font>
-                        </option>
-                        <option value="73">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Pilates</font>
-                            </font>
-                        </option>
-                        <option value="74">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">nefes egzersizleri</font>
-                            </font>
-                        </option>
-                        <option value="75">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">La finance</font>
-                            </font>
-                        </option>
-                        <option value="78">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Banque</font>
-                            </font>
-                        </option>
-                        <option value="80">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">greffe de cornée</font>
-                            </font>
-                        </option>
-                        <option value="81">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Pathologie </font>
-                            </font>
-                        </option>
-                        <option value="82">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Pathologie </font>
-                            </font>
-                        </option>
-                        <option value="83">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Shaymaa Ahmed</font>
-                            </font>
-                        </option>
-                        <option value="84">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">bosse</font>
-                            </font>
-                        </option>
-                        <option value="85">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Psychologie</font>
-                            </font>
-                        </option>
-                        <option value="88">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">STOCK</font>
-                            </font>
-                        </option>
-                        <option value="89">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Soins infirmiers</font>
-                            </font>
-                        </option>
-                        <option value="90">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">AYURVEDA</font>
-                            </font>
-                        </option>
-                        <option value="91">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">admin rddc</font>
-                            </font>
-                        </option>
-                        <option value="93">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Faire gdo vino</font>
-                            </font>
-                        </option>
-                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                        style="width: 552.75px;"><span class="selection"><span
-                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
-                                aria-expanded="false" tabindex="0"
-                                aria-labelledby="select2-department_id-container"><span
-                                    class="select2-selection__rendered" id="select2-department_id-container"><span
-                                        class="select2-selection__placeholder">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Sélectionnez l'option</font>
-                                        </font>
-                                    </span></span><span class="select2-selection__arrow" role="presentation"><b
-                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                            aria-hidden="true"></span></span>
-                    <span class="doctor_error"></span>
+
+                    </select>
+                    <div *ngIf="submitted && f.departement_id.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.departement_id.errors.required">
+                            {{msg.validationMessage.departement_id}}</div>
+                    </div>
                 </div>
             </div>
+
             <div class="form-group row">
                 <label for="doctor_id" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -281,25 +82,21 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
-                    <select name="doctor_id" class="form-control select2-hidden-accessible" id="doctor_id" tabindex="-1"
-                        aria-hidden="true">
-                        <option value="0"></option>
-                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                        style="width: 552.75px;"><span class="selection"><span
-                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
-                                aria-expanded="false" tabindex="0" aria-labelledby="select2-doctor_id-container"><span
-                                    class="select2-selection__rendered" id="select2-doctor_id-container" title=""><span
-                                        class="select2-selection__clear">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">×</font>
-                                        </font>
-                                    </span></span><span class="select2-selection__arrow" role="presentation"><b
-                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                            aria-hidden="true"></span></span>
-                    <div id="available_days"></div>
+                <div class="col-md-6">
+                    <select name="doctor_id" class="form-control select2-hidden-accessible"
+                        [ngClass]="{ 'is-invalid': submitted && f.doctor_id.errors }" formControlName="doctor_id"
+                        id="doctor_id" tabindex="-1" aria-hidden="true">
+                        <option value="John Doe">John Doe</option>
+                    </select>
+                    <div *ngIf="submitted && f.doctor_id.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.doctor_id.errors.required">
+                            {{msg.validationMessage.doctor_id}}</div>
+                    </div>
                 </div>
+
             </div>
+
+
             <div class="form-group row">
                 <label for="date" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -310,79 +107,52 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <input name="date" type="text" class="datepicker-avaiable-days form-control hasDatepicker" id="date"
+                        [ngClass]="{ 'is-invalid': submitted && f.date.errors }" formControlName="date"
                         placeholder="Date de rendez-vous" autocpmplete="off">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="serial_no" class="col-xs-3 col-form-label">
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">Numéro de série </font>
-                    </font><i class="text-danger">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">*</font>
-                        </font>
-                    </i>
-                </label>
-                <div class="col-xs-9">
-                    <div id="serial_preview">
-                        <div type="button" class="btn btn-success disabled btn-sm">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;"> 01</font>
-                            </font>
-                        </div>
-                        <div type="button" class="btn btn-success disabled btn-sm">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;"> 02</font>
-                            </font>
-                        </div>
-                        <div type="button" class="btn btn-success disabled btn-sm">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;"> 03</font>
-                            </font>
-                        </div>
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">...
-                            </font>
-                        </font>
-                        <div type="button" class="slbtn btn btn-success disabled btn-sm">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;"> N</font>
-                            </font>
-                        </div>
+                    <div *ngIf="submitted && f.date.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.date.errors.required">
+                            {{msg.validationMessage.date}}</div>
                     </div>
-                    <input type="hidden" name="schedule_id" id="schedule_id">
-                    <input type="hidden" name="serial_no" id="serial_no">
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <label for="problem" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Problème</font>
                     </font>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <textarea name="problem" class="form-control" placeholder="Problème" maxlength="140"
+                        [ngClass]="{ 'is-invalid': submitted && f.problem.errors }" formControlName="problem"
                         rows="7"></textarea>
+                    <div *ngIf="submitted && f.problem.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.problem.errors.required">
+                            {{msg.validationMessage.problem}}</div>
+                    </div>
                 </div>
             </div>
+
             <div class="form-group row">
                 <label class="col-xs-3">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Statut</font>
                     </font>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <div class="form-check">
                         <label class="radio-inline">
-                            <input type="radio" name="status" value="1" checked="&quot;checked&quot;">
+                            <input formControlName="status" type="radio" name="status" value="actif"
+                                checked="&quot;checked&quot;">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">actif </font>
                             </font>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="status" value="0">
+                            <input formControlName="status" type="radio" name="status" value="Inactif">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Inactif </font>
                             </font>
@@ -390,6 +160,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <div class="  ">
                     <div class="btn btn-primarys">
@@ -399,7 +171,7 @@
                             </font>
                         </button>
                         <div class="or"></div>
-                        <button class="btn btn-success">
+                        <button (click)="add()" class="btn btn-success">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Sauvegarder</font>
                             </font>
@@ -407,6 +179,9 @@
                     </div>
                 </div>
             </div>
+
+
+
         </form>
 
 

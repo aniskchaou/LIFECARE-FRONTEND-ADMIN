@@ -1,15 +1,49 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { URLLoader } from 'src/app/main/configs/URLLoader';
+import InsuranceMessage from 'src/app/main/messages/InsuranceMessage';
+import InsuranceTestService from 'src/app/main/mocks/InsuranceTestService';
+import InsuranceValidation from 'src/app/main/validations/InsuranceValidation';
 
 @Component({
   selector: 'app-add-insurance',
   templateUrl: './add-insurance.component.html',
   styleUrls: ['./add-insurance.component.css']
 })
-export class AddInsuranceComponent implements OnInit {
+export class AddInsuranceComponent extends URLLoader implements OnInit {
 
-  constructor() { }
+  insuranceForm: FormGroup
+  msg: InsuranceMessage
+  submitted = false
+
+
+  get f() { return this.insuranceForm.controls; }
+
+  constructor(private validation: InsuranceValidation, private message: InsuranceMessage, private insuranceTestService: InsuranceTestService) {
+    super()
+    this.insuranceForm = this.validation.formGroupInstance
+    this.msg = this.message
+
+  }
 
   ngOnInit(): void {
+  }
+
+  reset() {
+    this.insuranceForm.reset()
+  }
+
+  add() {
+    this.submitted = true;
+
+    if (this.validation.checkValidation()) {
+      this.insuranceTestService.create(this.insuranceForm.value)
+      super.show('Confirmation', this.msg.confirmationMessages.add, 'success')
+
+    }
+
+
+
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { URLLoader } from './../../../configs/URLLoader';
+import { URLLoader } from 'src/app/main/configs/URLLoader';
 
 @Component({
   selector: 'app-medicament',
@@ -8,16 +8,16 @@ import { URLLoader } from './../../../configs/URLLoader';
 })
 export class MedicamentComponent extends URLLoader implements OnInit {
 
-  showsummary:boolean=false
-  showgraphic:boolean=false
-  
+  showsummary: boolean = false
+  showgraphic: boolean = false
+
   constructor() {
     super()
-   }
-  
+  }
 
-ngOnInit() {
- super.loadScripts();
-}
+
+  ngOnInit() {
+    super.loadScripts();
+  }
 
 }

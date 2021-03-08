@@ -11,12 +11,12 @@
                 id="DataTables_Table_0" role="grid" style="width: 100%;">
                 <thead>
                     <tr role="row">
-                        
+
                         <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                             aria-label="ID du patient: activer pour trier la colonne par ordre croissant"
                             style="width: 59px;">
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">ID du patient</font>
+                                <font style="vertical-align: inherit;">Patient</font>
                             </font>
                         </th>
                         <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
@@ -36,7 +36,7 @@
                         <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                             aria-label="Date: activer pour trier les colonnes par ordre croissant" style="width: 53px;">
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Date</font>
+                                <font style="vertical-align: inherit;">Description</font>
                             </font>
                         </th>
                         <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
@@ -56,9 +56,34 @@
                 </thead>
                 <tbody>
 
+                    <tr *ngFor="let item of documents$">
+
+                        <td>
+                            {{item.patient_id}}
+                        </td>
+                        <td>
+                            {{item.doctor_id}}
+                        </td>
+                        <td class="badge badge-primary">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">essai.docx</font>
+                            </font>
+                        </td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.doctor_id}}</td>
+                        <td><button data-toggle="modal" data-target="#view" type="button"
+                                class="btn btn-primary btn-sm"><i class="fas fa-address-book"></i></button>
+                            <button data-toggle="modal" data-target="#edit" type="button"
+                                class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"
+                                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
+                                    class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+
 
                     <tr role="row" class="odd">
-                       
+
                         <td>
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">PLGBQOV2</font>
@@ -85,14 +110,19 @@
                                 </font>
                             </font>
                         </td>
-                        <td><button   data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i class="fas fa-address-book"></i></button>
-                            <button  data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
-                            <button  type="button" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i class="fas fa-trash-alt"></i></button></td>
+                        <td><button data-toggle="modal" data-target="#view" type="button"
+                                class="btn btn-primary btn-sm"><i class="fas fa-address-book"></i></button>
+                            <button data-toggle="modal" data-target="#edit" type="button"
+                                class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"
+                                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
+                                    class="fas fa-trash-alt"></i></button>
+                        </td>
                     </tr>
 
 
                     <tr role="row" class="odd">
-                       
+
                         <td>
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">LOHIHG067</font>
@@ -122,10 +152,14 @@
                             </font>
                         </td>
                         <td>
-                            <button  data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
-                            <button  type="button" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i class="fas fa-trash-alt"></i></button></td>
+                            <button data-toggle="modal" data-target="#edit" type="button"
+                                class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-danger btn-sm"
+                                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
+                                    class="fas fa-trash-alt"></i></button>
+                        </td>
                     </tr>
-             
+
                 </tbody>
             </table>
         </div>

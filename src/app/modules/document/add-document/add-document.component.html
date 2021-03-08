@@ -3,26 +3,38 @@
         <strong class="card-title">Nouveau</strong>
     </div>
     <div class="card-body">
-        <form action="https://hospitalnew.bdtask.com/demo7/patient/document_form" class="form-inner" id="mailForm"
-            enctype="multipart/form-data" method="post" accept-charset="utf-8">
-            <input type="hidden" name="csrf_stream_token" value="54d9acfde70440daf2e8f376c5d7e2b9">
+        <form class="form-inner" id="mailForm" enctype="multipart/form-data" [formGroup]="documentForm"
+            accept-charset="utf-8">
+
+
             <div class="form-group row">
-                <label for="patient_id" class="col-xs-3 col-form-label">
+                <label for="patient_id" class="col-md-6 col-form-label">
                     <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;">ID du patient </font>
-                    </font><i class="text-danger">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">*</font>
-                        </font>
-                    </i>
+                        <font style="vertical-align: inherit;">Nom de patient</font>
+                    </font>
                 </label>
-                <div class="col-xs-9">
-                    <input name="patient_id" type="text" class="form-control" id="patient_id"
-                        placeholder="ID du patient" value="">
+                <div class="col-md-6">
+                    <select name="patient_id" class="form-control select2-hidden-accessible" id="patient_id"
+                        [ngClass]="{ 'is-invalid': submitted && f.patient_id.errors }" formControlName="patient_id"
+                        tabindex="-1" aria-hidden="true">
+                        <option value="Willam Carlos">
+                            Willam Carlos
+                        </option>
+
+                    </select>
+
+                    <div *ngIf="submitted && f.doctor_id.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.doctor_id.errors.required">
+                            {{msg.validationMessage.doctor_id}}</div>
+                    </div>
                 </div>
             </div>
+
+
+
+
             <div class="form-group row">
-                <label for="attach_file" class="col-xs-3 col-form-label">
+                <label for="attach_file" class="col-md-6 col-form-label">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Joindre un fichier </font>
                     </font><i class="text-danger">
@@ -31,260 +43,55 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <input type="file" name="attach_file" id="attach_file">
-                    <input type="hidden" name="hidden_attach_file" id="hidden_attach_file" value="">
+
                     <p id="upload-progress" class="hide alert"></p>
                 </div>
             </div>
+
+
+
             <div class="form-group row">
-                <label for="doctor_id" class="col-xs-3 col-form-label">
+                <label for="doctor_id" class="col-md-6 col-form-label">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Nom du médecin</font>
                     </font>
                 </label>
-                <div class="col-xs-9">
-                    <select name="doctor_id" class="form-control select2-hidden-accessible" id="doctor_id" tabindex="-1"
-                        aria-hidden="true">
-                        <option value="" selected="selected">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Sélectionnez un médecin</font>
-                            </font>
+                <div class="col-md-6">
+                    <select name="doctor_id" class="form-control select2-hidden-accessible" id="doctor_id"
+                        [ngClass]="{ 'is-invalid': submitted && f.doctor_id.errors }" formControlName="doctor_id"
+                        tabindex="-1" aria-hidden="true">
+                        <option value="Willam Carlos">
+                            Willam Carlos
                         </option>
-                        <option value="3">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Willam Carlos</font>
-                            </font>
-                        </option>
-                        <option value="4">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Adward Chapman</font>
-                            </font>
-                        </option>
-                        <option value="14">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Dr Aikenhead</font>
-                            </font>
-                        </option>
-                        <option value="15">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Dr Truluck</font>
-                            </font>
-                        </option>
-                        <option value="16">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;"> Dr Bonebrake</font>
-                            </font>
-                        </option>
-                        <option value="17">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">David Willy</font>
-                            </font>
-                        </option>
-                        <option value="18">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Épouser lan</font>
-                            </font>
-                        </option>
-                        <option value="19">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Harlin Willy </font>
-                            </font>
-                        </option>
-                        <option value="20">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Adward Henry</font>
-                            </font>
-                        </option>
-                        <option value="21">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Alan Walker</font>
-                            </font>
-                        </option>
-                        <option value="22">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">John Doye</font>
-                            </font>
-                        </option>
-                        <option value="25">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Docteur Paul</font>
-                            </font>
-                        </option>
-                        <option value="26">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Salman Mehboob</font>
-                            </font>
-                        </option>
-                        <option value="27">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">rajesh r</font>
-                            </font>
-                        </option>
-                        <option value="28">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Hokky Kurniawan</font>
-                            </font>
-                        </option>
-                        <option value="30">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">xyz jkl</font>
-                            </font>
-                        </option>
-                        <option value="31">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">dr1 dr11</font>
-                            </font>
-                        </option>
-                        <option value="32">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">David Capella</font>
-                            </font>
-                        </option>
-                        <option value="33">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">demoDoctor démo</font>
-                            </font>
-                        </option>
-                        <option value="34">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Mohamed Abdi Ali</font>
-                            </font>
-                        </option>
-                        <option value="35">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Ali Mohammed</font>
-                            </font>
-                        </option>
-                        <option value="36">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">docteur</font>
-                            </font>
-                        </option>
-                        <option value="37">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">rajkumar nikalje</font>
-                            </font>
-                        </option>
-                        <option value="38">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">rajkumar nikalje</font>
-                            </font>
-                        </option>
-                        <option value="40">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Jay Jay</font>
-                            </font>
-                        </option>
-                        <option value="41">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Dhara Patel</font>
-                            </font>
-                        </option>
-                        <option value="42">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">asds saassa</font>
-                            </font>
-                        </option>
-                        <option value="43">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Kanna Pidugu</font>
-                            </font>
-                        </option>
-                        <option value="44">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">"&gt; &lt;svg / onload = alert (1)&gt;"&gt;
-                                    &lt;svg / onload = alert (1)&gt;</font>
-                            </font>
-                        </option>
-                        <option value="45">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Tari Aslam</font>
-                            </font>
-                        </option>
-                        <option value="46">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Raghavendra Acharya</font>
-                            </font>
-                        </option>
-                        <option value="48">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Jennifer Smith</font>
-                            </font>
-                        </option>
-                        <option value="49">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">pilates hocası1 plts</font>
-                            </font>
-                        </option>
-                        <option value="51">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">ABCD ABCD</font>
-                            </font>
-                        </option>
-                        <option value="53">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Dre Rapper</font>
-                            </font>
-                        </option>
-                        <option value="54">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;"> Ashis Karmakar</font>
-                            </font>
-                        </option>
-                        <option value="56">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">jicmaale Kayse</font>
-                            </font>
-                        </option>
-                        <option value="57">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Juan Juan</font>
-                            </font>
-                        </option>
-                        <option value="59">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Samar Ali</font>
-                            </font>
-                        </option>
-                        <option value="60">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">HARI PN</font>
-                            </font>
-                        </option>
-                        <option value="61">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Fournisseur CITY</font>
-                            </font>
-                        </option>
-                        <option value="62">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Moubarik Moussa</font>
-                            </font>
-                        </option>
-                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                        style="width: 552.75px;"><span class="selection"><span
-                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
-                                aria-expanded="false" tabindex="0" aria-labelledby="select2-doctor_id-container"><span
-                                    class="select2-selection__rendered" id="select2-doctor_id-container"><span
-                                        class="select2-selection__placeholder">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Sélectionnez l'option</font>
-                                        </font>
-                                    </span></span><span class="select2-selection__arrow" role="presentation"><b
-                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                            aria-hidden="true"></span></span>
-                    <div id="available_days"></div>
+
+                    </select>
+
+                    <div *ngIf="submitted && f.doctor_id.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.doctor_id.errors.required">
+                            {{msg.validationMessage.doctor_id}}</div>
+                    </div>
                 </div>
             </div>
+
+
             <div class="form-group row">
-                <label for="description" class="col-xs-3 col-form-label">
+                <label for="description" class="col-md-6 col-form-label">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">La description</font>
                     </font>
                 </label>
-                <textarea class="form-control"></textarea>
+                <textarea [ngClass]="{ 'is-invalid': submitted && f.description.errors }" formControlName="description"
+                    class="form-control"></textarea>
+
+                <div *ngIf="submitted && f.description.errors" class="alert alert-danger">
+                    <div *ngIf="submitted && f.description.errors.required">
+                        {{msg.validationMessage.description}}</div>
+                </div>
             </div>
+
+
             <div class="form-group row">
                 <div class="  ">
 
@@ -296,14 +103,16 @@
                             </font>
                         </button>
                         <div class="or"></div>
-                        <button class="btn btn-success">
+                        <button (click)="add()" class="btn btn-success">
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Envoyer</font>
+                                <font style="vertical-align: inherit;">Sauvegarder</font>
                             </font>
                         </button>
                     </div>
                 </div>
             </div>
+
+
         </form>
 
 

@@ -3,9 +3,10 @@
         <strong class="card-title">Nouveau</strong>
     </div>
     <div class="card-body">
-        <form class="form-inner" enctype="multipart/form-data" method="post" accept-charset="utf-8">
-            <input type="hidden" name="csrf_stream_token" value="162d730414d20d5ad0e117d5ec63276b">
-            <input type="hidden" name="id" value="">
+        <form class="form-inner" enctype="multipart/form-data" method="post" [formGroup]="patientForm"
+            accept-charset="utf-8">
+
+
             <div class="form-group row">
                 <label for="firstname" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -16,11 +17,20 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
-                    <input name="firstname" type="text" class="form-control" id="firstname" placeholder="Prénom"
-                        value="">
+                <div class="col-md-6">
+                    <input name="firstname" type="text" class="form-control" id="firstname"
+                        [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" formControlName="firstname"
+                        placeholder="Prénom" value="">
+
+                    <div *ngIf="submitted && f.firstname.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.firstname.errors.required">
+                            {{msg.validationMessage.firstname}}</div>
+                    </div>
+
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <label for="lastname" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -31,11 +41,19 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
-                    <input name="lastname" type="text" class="form-control" id="lastname" placeholder="Nom de famille"
-                        value="">
+                <div class="col-md-6">
+                    <input name="lastname" type="text" class="form-control" id="lastname"
+                        [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" formControlName="lastname"
+                        placeholder="Nom de famille" value="">
+
+                    <div *ngIf="submitted && f.lastname.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.lastname.errors.required">
+                            {{msg.validationMessage.lastname}}</div>
+                    </div>
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <label for="email" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -46,11 +64,19 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
-                    <input name="email" type="email" class="form-control" id="email" placeholder="Adresse e-mail"
-                        value="">
+                <div class="col-md-6">
+                    <input name="email" type="email" class="form-control" id="email"
+                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }" formControlName="email"
+                        placeholder="Adresse e-mail" value="">
+
+                    <div *ngIf="submitted && f.email.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.email.errors.required">
+                            {{msg.validationMessage.email}}</div>
+                    </div>
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <label for="password" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -61,22 +87,35 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <input name="password" type="password" class="form-control" id="password"
+                        [ngClass]="{ 'is-invalid': submitted && f.password.errors }" formControlName="password"
                         placeholder="Mot de passe">
+                    <div *ngIf="submitted && f.password.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.password.errors.required">
+                            {{msg.validationMessage.password}}</div>
+                    </div>
                 </div>
             </div>
+
             <div class="form-group row">
                 <label for="phone" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Pas de téléphone</font>
                     </font>
                 </label>
-                <div class="col-xs-9">
-                    <input name="phone" class="form-control" type="number" placeholder="Pas de téléphone" id="phone"
+                <div class="col-md-6">
+                    <input name="phone" class="form-control" type="number" placeholder="Pas de téléphone"
+                        [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" formControlName="phone" id="phone"
                         value="">
+                    <div *ngIf="submitted && f.phone.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.phone.errors.required">
+                            {{msg.validationMessage.phone}}</div>
+                    </div>
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <label for="mobile" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -87,25 +126,29 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
-                    <input name="mobile" class="form-control" type="number" placeholder="Mobile Non" id="mobile"
+                <div class="col-md-6">
+                    <input name="mobile" class="form-control" type="number" placeholder="Mobile Non"
+                        [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" formControlName="mobile" id="mobile"
                         value="">
+                    <div *ngIf="submitted && f.mobile.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.mobile.errors.required">
+                            {{msg.validationMessage.mobile}}</div>
+                    </div>
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <label for="blood_group" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Groupe sanguin</font>
                     </font>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <select name="blood_group" class="form-control select2-hidden-accessible" id="blood_group"
+                        [ngClass]="{ 'is-invalid': submitted && f.blood_group.errors }" formControlName="blood_group"
                         tabindex="-1" aria-hidden="true">
-                        <option value="" selected="selected">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Sélectionnez une option</font>
-                            </font>
-                        </option>
+
                         <option value="A+">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">A +</font>
@@ -113,7 +156,7 @@
                         </option>
                         <option value="A-">
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">UNE-</font>
+                                <font style="vertical-align: inherit;">A-</font>
                             </font>
                         </option>
                         <option value="B+">
@@ -146,20 +189,17 @@
                                 <font style="vertical-align: inherit;">UN B-</font>
                             </font>
                         </option>
-                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                        style="width: 552.75px;"><span class="selection"><span
-                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
-                                aria-expanded="false" tabindex="0" aria-labelledby="select2-blood_group-container"><span
-                                    class="select2-selection__rendered" id="select2-blood_group-container"><span
-                                        class="select2-selection__placeholder">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">Sélectionnez l'option</font>
-                                        </font>
-                                    </span></span><span class="select2-selection__arrow" role="presentation"><b
-                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                            aria-hidden="true"></span></span>
+                    </select>
+
+                    <div *ngIf="submitted && f.blood_group.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.blood_group.errors.required">
+                            {{msg.validationMessage.blood_group}}</div>
+                    </div>
                 </div>
             </div>
+
+
+
             <div class="form-group row">
                 <label class="col-xs-3">
                     <font style="vertical-align: inherit;">
@@ -170,29 +210,27 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <div class="form-check">
                         <label class="radio-inline">
-                            <input type="radio" name="sex" value="Male" checked="&quot;checked&quot;">
+                            <input formControlName="sex" type="radio" name="sex" value="Male"
+                                checked="&quot;checked&quot;">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Masculin </font>
                             </font>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="sex" value="Female">
+                            <input formControlName="sex" type="radio" name="sex" value="Female">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Femme </font>
                             </font>
                         </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="sex" value="Other">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Autre </font>
-                            </font>
-                        </label>
+
                     </div>
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <label for="date_of_birth" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -203,9 +241,16 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <input name="date_of_birth" class="dropdown-month-years form-control hasDatepicker" type="text"
-                        placeholder="Date de naissance" id="date_of_birth" value="2021-01-19">
+                        [ngClass]="{ 'is-invalid': submitted && f.date_of_birth.errors }"
+                        formControlName="date_of_birth" placeholder="Date de naissance" id="date_of_birth"
+                        value="2021-01-19">
+
+                    <div *ngIf="submitted && f.date_of_birth.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.date_of_birth.errors.required">
+                            {{msg.validationMessage.date_of_birth}}</div>
+                    </div>
                 </div>
             </div>
 
@@ -215,11 +260,13 @@
                         <font style="vertical-align: inherit;">Image</font>
                     </font>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <input type="file" name="picture" id="picture" value="">
                     <input type="hidden" name="old_picture" value="">
                 </div>
             </div>
+
+
             <div class="form-group row">
                 <label for="address" class="col-xs-3 col-form-label">
                     <font style="vertical-align: inherit;">
@@ -230,27 +277,37 @@
                         </font>
                     </i>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <textarea name="address" class="form-control" placeholder="Adresse" maxlength="140"
+                        [ngClass]="{ 'is-invalid': submitted && f.address.errors }" formControlName="address"
                         rows="7"></textarea>
+
+                    <div *ngIf="submitted && f.address.errors" class="alert alert-danger">
+                        <div *ngIf="submitted && f.address.errors.required">
+                            {{msg.validationMessage.address}}</div>
+                    </div>
                 </div>
             </div>
+
+
+
             <div class="form-group row">
                 <label class="col-xs-3">
                     <font style="vertical-align: inherit;">
                         <font style="vertical-align: inherit;">Statut</font>
                     </font>
                 </label>
-                <div class="col-xs-9">
+                <div class="col-md-6">
                     <div class="form-check">
                         <label class="radio-inline">
-                            <input type="radio" name="status" value="1" checked="&quot;checked&quot;">
+                            <input formControlName="status" type="radio" name="status" value="1"
+                                checked="&quot;checked&quot;">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">actif </font>
                             </font>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="status" value="0">
+                            <input formControlName="status" type="radio" name="status" value="0">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Inactif </font>
                             </font>
@@ -258,16 +315,16 @@
                     </div>
                 </div>
             </div>
-            <div >
-                <div >
+            <div>
+                <div>
                     <div>
                         <button type="reset" class="btn btn-primary">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Réinitialiser</font>
                             </font>
                         </button>
-                        
-                        <button class="btn btn-success">
+
+                        <button (click)="add()" class="btn btn-success">
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">Sauvegarder</font>
                             </font>
