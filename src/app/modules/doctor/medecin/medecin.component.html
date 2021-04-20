@@ -33,80 +33,18 @@
 
             <td>{{item.lastname}}</td>
             <td>{{item.firstname}}</td>
-            <td class="badge badge-success">{{item.departement_id}}</td>
+            <td><span class="badge badge-success">{{item.departement_id}}</span></td>
             <td>{{item.email}}</td>
             <td>{{item.mobile}}</td>
             <td><button data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i
                   class="fas fa-address-book"></i></button>
-              <button data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i
-                  class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-danger btn-sm"
-                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
+              <button (click)="edit(item.id)" data-toggle="modal" data-target="#edit" type="button"
+                class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm" (click)="delete(item.id)"><i
                   class="fas fa-trash-alt"></i></button>
             </td>
           </tr>
 
-
-
-
-
-
-
-          <tr>
-
-            <td>Satordi</td>
-            <td>Langlois</td>
-            <td class="badge badge-success">Radiographie</td>
-            <td>SatordiLanglois@rhyta.com</td>
-            <td>04.11.17.64.94</td>
-            <td><button data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i
-                  class="fas fa-address-book"></i></button>
-              <button data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i
-                  class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-danger btn-sm"
-                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
-                  class="fas fa-trash-alt"></i></button>
-            </td>
-          </tr>
-
-
-          <tr>
-
-            <td>Talon </td>
-            <td>Fluet</td>
-            <td class="badge badge-success">Ophtalmologie</td>
-            <td>TalonFluet@armyspy.com</td>
-            <td>
-              03.63.88.35.70</td>
-            <td><button data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i
-                  class="fas fa-address-book"></i></button>
-              <button data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i
-                  class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-danger btn-sm"
-                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
-                  class="fas fa-trash-alt"></i></button>
-            </td>
-          </tr>
-
-
-
-          <tr>
-
-            <td>Percy </td>
-            <td>LeBatelier</td>
-            <td class="badge badge-success">Néphrologie</td>
-            <td>PercyLeBatelier@armyspy.com</td>
-            <td>01.32.69.71.51
-            </td>
-            <td><button data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i
-                  class="fas fa-address-book"></i></button>
-              <button data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i
-                  class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-danger btn-sm"
-                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
-                  class="fas fa-trash-alt"></i></button>
-            </td>
-          </tr>
 
 
         </tbody>
@@ -122,10 +60,10 @@
               </button>
             </div>
             <div class="modal-body">
-
+              <app-edit-medecin></app-edit-medecin>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
 
             </div>
           </div>
@@ -146,7 +84,7 @@
               <app-view-doctor></app-view-doctor>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
 
             </div>
           </div>

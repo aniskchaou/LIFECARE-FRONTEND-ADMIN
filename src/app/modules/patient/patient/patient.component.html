@@ -37,79 +37,17 @@
             <td>{{item.lastname}}</td>
             <td>{{item.email}}</td>
             <td>{{item.mobile}}</td>
-            <td>73, rue Sadi Carnot
-              93300 AUBERVILLIERS</td>
+            <td>{{item.address}}</td>
             <td>{{item.sex}}</td>
             <td><button data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i
                   class="fas fa-address-book"></i></button>
-              <button data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i
-                  class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-danger btn-sm"
-                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
+              <button (click)="edit(item.id)" data-toggle="modal" data-target="#edit" type="button"
+                class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+              <button type="button" class="btn btn-danger btn-sm" (click)="delete(item.id)"><i
                   class="fas fa-trash-alt"></i></button>
             </td>
           </tr>
 
-
-          <tr>
-            <td>Germain</td>
-            <td>Duplanty</td>
-            <td>GermainDuplanty@teleworm.us</td>
-            <td>01.12.63.73.39</td>
-            <td>73, rue Sadi Carnot
-              93300 AUBERVILLIERS</td>
-            <td>Homme</td>
-            <td><button data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i
-                  class="fas fa-address-book"></i></button>
-              <button data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i
-                  class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-danger btn-sm"
-                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
-                  class="fas fa-trash-alt"></i></button>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>Orville</td>
-            <td>Gadbois</td>
-            <td>OrvilleGadbois@teleworm.us
-            </td>
-            <td>03.76.92.21.87</td>
-            <td>39, Rue Joseph Vernet
-              84000 AVIGNON</td>
-            <td>Homme</td>
-            <td><button data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i
-                  class="fas fa-address-book"></i></button>
-              <button data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i
-                  class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-danger btn-sm"
-                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
-                  class="fas fa-trash-alt"></i></button>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td>Zoé</td>
-            <td>Tardif</td>
-            <td>ZoeTardif@teleworm.us</td>
-            <td>01.24.54.38.29
-            </td>
-            <td>38, rue de l'Epeule
-              92500 RUEIL-MALMAISON</td>
-            <td>Femme</td>
-            <td><button data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i
-                  class="fas fa-address-book"></i></button>
-              <button data-toggle="modal" data-target="#edit" type="button" class="btn btn-warning btn-sm"><i
-                  class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-danger btn-sm"
-                onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet enregistrement ?');"><i
-                  class="fas fa-trash-alt"></i></button>
-            </td>
-          </tr>
 
 
         </tbody>
@@ -125,10 +63,10 @@
               </button>
             </div>
             <div class="modal-body">
-
+              <app-edit-patient></app-edit-patient>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
 
             </div>
           </div>
@@ -150,7 +88,7 @@
               <app-view-patient></app-view-patient>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
 
             </div>
           </div>

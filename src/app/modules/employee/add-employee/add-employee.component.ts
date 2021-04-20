@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { URLLoader } from 'src/app/main/configs/URLLoader';
 import EmployeeMessage from 'src/app/main/messages/EmployeeMessage';
 import EmployeeTestService from 'src/app/main/mocks/EmployeeTestService';
@@ -19,7 +20,7 @@ export class AddEmployeeComponent extends URLLoader implements OnInit {
 
   get f() { return this.employeeForm.controls; }
 
-  constructor(private validation: EmployeeValidation, private message: EmployeeMessage, private employeeTestService: EmployeeTestService) {
+  constructor(private validation: EmployeeValidation, private router: Router, private message: EmployeeMessage, private employeeTestService: EmployeeTestService) {
     super()
     this.employeeForm = this.validation.formGroupInstance
     this.msg = this.message
@@ -40,6 +41,7 @@ export class AddEmployeeComponent extends URLLoader implements OnInit {
     if (this.validation.checkValidation()) {
       this.employeeTestService.create(this.employeeForm.value)
       super.show('Confirmation', this.msg.confirmationMessages.add, 'success')
+      this.router.navigate(['/accountant'])
 
     }
 

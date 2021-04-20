@@ -43,7 +43,7 @@ export class AddDoctorComponent extends URLLoader implements OnInit {
 
     if (this.validation.checkValidation()) {
       this.doctorTestService.create(this.doctorForm.value)
-      super.show('Confirmation', this.msg.confirmationMessages.add, 'success')
+      // super.show('Confirmation', this.msg.confirmationMessages.add, 'success')
       this.router.navigate(['/doctor'])
 
     }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { URLLoader } from 'src/app/main/configs/URLLoader';
 import InsuranceMessage from 'src/app/main/messages/InsuranceMessage';
 import InsuranceTestService from 'src/app/main/mocks/InsuranceTestService';
@@ -19,7 +20,7 @@ export class AddInsuranceComponent extends URLLoader implements OnInit {
 
   get f() { return this.insuranceForm.controls; }
 
-  constructor(private validation: InsuranceValidation, private message: InsuranceMessage, private insuranceTestService: InsuranceTestService) {
+  constructor(private router: Router, private validation: InsuranceValidation, private message: InsuranceMessage, private insuranceTestService: InsuranceTestService) {
     super()
     this.insuranceForm = this.validation.formGroupInstance
     this.msg = this.message
@@ -27,6 +28,7 @@ export class AddInsuranceComponent extends URLLoader implements OnInit {
   }
 
   ngOnInit(): void {
+    super.loadScripts()
   }
 
   reset() {
@@ -39,7 +41,7 @@ export class AddInsuranceComponent extends URLLoader implements OnInit {
     if (this.validation.checkValidation()) {
       this.insuranceTestService.create(this.insuranceForm.value)
       super.show('Confirmation', this.msg.confirmationMessages.add, 'success')
-
+      this.router.navigate(['/insurance'])
     }
 
 

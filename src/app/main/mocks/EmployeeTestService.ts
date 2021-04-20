@@ -6,8 +6,18 @@ import Service from "../interfaces/Service";
     providedIn: 'root'
 })
 export default class EmployeeTestService implements Service {
-    public ID = new BehaviorSubject<string>(null);
-    _employee = []
+    public ID = new BehaviorSubject<"">(null);
+    _employee = [{
+        id: 1,
+        user_role: "",
+        firstname: "",
+        lastname: "",
+        email: "",
+        password: "",
+        mobile: "",
+        sex: "",
+        status: ""
+    }]
     static id = 0
 
     public getAll() {
@@ -25,14 +35,15 @@ export default class EmployeeTestService implements Service {
         console.log(data)
     };
 
-    public update(old, data) {
+    public update(data) {
 
-        var foundIndex = this._employee.findIndex(item => item === old);
+        var foundIndex = this._employee.findIndex(item => item.id === parseInt(data.id));
         this._employee[foundIndex] = data;
     };
 
     public remove(id) {
-        this._employee.splice(id, 1);
+        var client = this.get(id)
+        this._employee.splice(this._employee.indexOf(client), 1);
     };
 
 

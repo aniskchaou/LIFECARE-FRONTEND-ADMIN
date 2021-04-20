@@ -16,7 +16,8 @@ export class DepartementComponent extends URLLoader implements OnInit {
   id = 0
 
 
-  constructor(private departementTestService: DepartementTestService, private messageService: DepartementMessage) {
+  constructor(private departementTestService: DepartementTestService,
+    private messageService: DepartementMessage) {
     super()
 
   }
@@ -28,6 +29,7 @@ export class DepartementComponent extends URLLoader implements OnInit {
   edit(id) {
     this.setId(id)
     this.departementTestService.ID.next(id.toString())
+    console.log(id)
   }
 
   delete(id) {

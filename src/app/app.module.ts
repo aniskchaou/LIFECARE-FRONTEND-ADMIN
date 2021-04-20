@@ -51,6 +51,22 @@ import { ViewDoctorComponent } from './view-doctor/view-doctor.component';
 import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { ViewPrescriptionComponent } from './view-prescription/view-prescription.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditDepartementComponent } from './modules/departement/edit-departement/edit-departement.component';
+import { EditMedecinComponent } from './modules/doctor/edit-medecin/edit-medecin.component';
+import { EditEmployeeComponent } from './modules/employee/edit-employee/edit-employee.component';
+import { EditAccountComponent } from './modules/account/edit-account/edit-account.component';
+import { EditCategoryComponent } from './modules/category/edit-category/edit-category.component';
+import { EditDocumentComponent } from './modules/document/edit-document/edit-document.component';
+import { EditMedicamentComponent } from './modules/medicament/edit-medicament/edit-medicament.component';
+import { EditInsuranceComponent } from './modules/insurance/edit-insurance/edit-insurance.component';
+import { EditInvoiceComponent } from './modules/invoice/edit-invoice/edit-invoice.component';
+import { EditPatientComponent } from './modules/patient/edit-patient/edit-patient.component';
+import { EditPrescriptionComponent } from './modules/prescription/edit-prescription/edit-prescription.component';
+import { EditRendezvousComponent } from './modules/schedule/edit-rendezvous/edit-rendezvous.component';
+import { HospitalConfigComponent } from './modules/general/hospital-config/hospital-config.component';
+import { EmailConfigComponent } from './modules/general/email-config/email-config.component';
+import { SystemConfigComponent } from './modules/general/system-config/system-config.component';
+import { ShortcutMenuComponent } from './template/shortcut-menu/shortcut-menu.component';
 
 
 const routes: Routes = [
@@ -90,7 +106,9 @@ const routes: Routes = [
   { path: 'addemployee', component: AddEmployeeComponent },
   { path: 'addrendezvous', component: AddAppointmentComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'configuration', component: ConfigurationComponent },
+  { path: 'system-config', component: SystemConfigComponent },
+  { path: 'email-config', component: EmailConfigComponent },
+  { path: 'hospital-config', component: HospitalConfigComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'login', pathMatch: 'full' }]
 
@@ -149,7 +167,22 @@ const routes: Routes = [
     AddInsuranceComponent,
     ViewDoctorComponent,
     ViewPatientComponent,
-    ViewPrescriptionComponent
+    ViewPrescriptionComponent,
+    EditDepartementComponent,
+    EditMedecinComponent,
+    EditEmployeeComponent,
+    EditAccountComponent,
+    EditCategoryComponent,
+    EditDocumentComponent,
+    EditMedicamentComponent,
+    EditInsuranceComponent,
+    EditInvoiceComponent,
+    EditPatientComponent,
+    EditRendezvousComponent,
+    HospitalConfigComponent,
+    EmailConfigComponent,
+    SystemConfigComponent,
+    ShortcutMenuComponent
   ],
   imports: [
     BrowserModule,
