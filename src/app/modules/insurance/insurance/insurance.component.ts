@@ -38,6 +38,7 @@ export class InsuranceComponent extends URLLoader implements OnInit {
       this.setId(id)
       this.insuranceTestService.remove(parseInt(id))
       super.show('Confirmation', this.messageService.confirmationMessages.delete, 'success')
+      document.getElementById("closeModalButton").click();
     }
 
   }
