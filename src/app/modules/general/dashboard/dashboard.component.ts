@@ -1,44 +1,145 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js';
 import { URLLoader } from 'src/app/main/configs/URLLoader';
+import Appointement from 'src/app/main/models/Appointement';
+import { Bed } from 'src/app/main/models/Bed';
+import Doctor from 'src/app/main/models/Doctor';
+import Patient from 'src/app/main/models/Patient';
+import { HTTPService } from 'src/app/main/services/HTTPService';
+import URLS from 'src/app/main/urls/urls';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent extends URLLoader implements OnInit {
+  single: any[];
+  multi: any[];
+  dep: any[];
 
-  constructor() { super() }
+  view: any[] = [500, 450];
+
+  // options
+  showXAxis = true;
+  showYAxis = true;
+  gradient = false;
+  showLegend = true;
+  showXAxisLabel = true;
+  xAxisLabel = 'Months';
+  showYAxisLabel = true;
+  yAxisLabel = '';
+
+  colorScheme = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA'],
+  };
+  patients$: any;
+  doctors$: number;
+  appointements$: number;
+  beds$: number;
+
+  constructor(private httpService: HTTPService) {
+    super();
+    Object.assign(this, { single });
+    Object.assign(this, { dep });
+  }
 
   ngOnInit(): void {
-
-    let data = [20000, 14000, 12000, 15000, 18000, 19000, 22000];
-    let data2 = [65000, 34000, 23000, 56000, 34000, 25000, 11000];
-    let labels = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-    var ctx1 = document.getElementsByClassName("revenue-chart");
-    var ctx2 = document.getElementsByClassName("patient-chart");
-    this.renderChart(data, labels, ctx1, 'rgba(67, 255, 15, 1)');
-    this.renderChart(data2, labels, ctx2, 'rgba(0, 90, 224, 1)');
-    super.show('Life care', 'Cette application est en cours de développment.', 'info')
-  }
-
-
-  renderChart(data, labels, ctx, color) {
-
-
-    var myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: '',
-          data: data,
-          backgroundColor: color,
-          borderColor: color,
-        }]
+    this.httpService.getAll(URLS.URL_BASE + '/patient/all').subscribe(
+      (data: Patient[]) => {
+        this.patients$ = data?.length;
+        // super.loadScripts();
       },
-    });
+      (err: HttpErrorResponse) => {
+        super.show('Error', err.message, 'warning');
+      }
+    );
+
+    this.httpService.getAll(URLS.URL_BASE + '/doctor/all').subscribe(
+      (data: Doctor[]) => {
+        this.doctors$ = data?.length;
+        // super.loadScripts();
+      },
+      (err: HttpErrorResponse) => {
+        super.show('Error', err.message, 'warning');
+      }
+    );
+
+    this.httpService.getAll(URLS.URL_BASE + '/appointement/all').subscribe(
+      (data: Appointement[]) => {
+        this.appointements$ = data?.length;
+        // super.loadScripts();
+      },
+      (err: HttpErrorResponse) => {
+        super.show('Error', err.message, 'warning');
+      }
+    );
+
+    this.httpService.getAll(URLS.URL_BASE + '/bed/all').subscribe(
+      (data: Bed[]) => {
+        this.beds$ = data?.length;
+        // super.loadScripts();
+      },
+      (err: HttpErrorResponse) => {
+        super.show('Error', err.message, 'warning');
+      }
+    );
   }
 
+  single2: any[];
+  view2: any[] = [500, 400];
+
+  // options
+  gradient2: boolean = true;
+  showLegend2: boolean = true;
+  showLabels2: boolean = true;
+  isDoughnut2: boolean = false;
+  legendPosition2: string = 'below';
+
+  colorScheme2 = {
+    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA'],
+  };
+
+  onSelect(data): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+  }
+
+  onActivate(data): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
+
+  onDeactivate(data): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
 }
+
+export var single = [
+  {
+    name: 'June',
+    value: 8940000,
+  },
+  {
+    name: 'July',
+    value: 5000000,
+  },
+  {
+    name: 'August',
+    value: 7200000,
+  },
+];
+
+export var dep = [
+  {
+    name: 'Cardiology',
+    value: 8940000,
+  },
+  {
+    name: 'Neurology',
+    value: 5000000,
+  },
+  {
+    name: 'Radiology',
+    value: 7200000,
+  },
+];

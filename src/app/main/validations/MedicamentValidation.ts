@@ -1,35 +1,34 @@
-
 import { Injectable } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
-export default class BuyValidation {
-    formGroup: FormGroup;
+export default class MedicamentValidation {
+  formGroup: FormGroup;
 
-    public get formGroupInstance(): FormGroup {
-        return this.formGroup;
+  public get formGroupInstance(): FormGroup {
+    return this.formGroup;
+  }
+
+  constructor() {
+    this.formGroup = this.createFormGroup();
+  }
+
+  public checkValidation() {
+    if (this.formGroup.invalid) {
+      return false;
     }
-
-    constructor() {
-        this.formGroup = this.createFormGroup()
-    }
-
-    public checkValidation() {
-
-        if (this.formGroup.invalid) {
-            return false;
-        }
-        return true;
-    }
-    createFormGroup() {
-        return new FormGroup({
-
-            supplier: new FormControl('', Validators.required),
-            product_id: new FormControl(),
-            purchase_date: new FormControl('', Validators.required),
-            purchase_invoiceNo: new FormControl('', Validators.required),
-            purchase_status: new FormControl('', Validators.required),
-        })
-    }
+    return true;
+  }
+  createFormGroup() {
+    return new FormGroup({
+      category: new FormControl('', Validators.required),
+      description: new FormControl(),
+      expireDate: new FormControl('', Validators.required),
+      price: new FormControl('', Validators.required),
+      quantity: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      type: new FormControl('', Validators.required),
+    });
+  }
 }

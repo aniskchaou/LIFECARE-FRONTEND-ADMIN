@@ -1,49 +1,58 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { URLLoader } from 'src/app/main/configs/URLLoader';
-import ScheduleMessage from 'src/app/main/messages/ScheduleMessage';
-import ScheduleTestService from 'src/app/main/mocks/ScheduleTestService';
-import ScheduleValidation from 'src/app/main/validations/ScheduleValidation';
 
 @Component({
   selector: 'app-add-schedule',
   templateUrl: './add-schedule.component.html',
-  styleUrls: ['./add-schedule.component.css']
+  styleUrls: ['./add-schedule.component.css'],
 })
-export class AddScheduleComponent extends URLLoader implements OnInit {
+export class AddScheduleComponent implements OnInit {
+  /*  doctorForm: FormGroup;
+  msg: DoctorMessage;
+  submitted = false;
 
-  scheduleForm: FormGroup
-  msg: ScheduleMessage
-  submitted = false
-
-
-  get f() { return this.scheduleForm.controls; }
-
-  constructor(private validation: ScheduleValidation, private message: ScheduleMessage, private scheduleTestService: ScheduleTestService) {
-    super()
-    this.scheduleForm = this.validation.formGroupInstance
-    this.msg = this.message
-
+  get f() {
+    return this.doctorForm.controls;
   }
 
-  ngOnInit(): void {
+  constructor(
+    private router: Router,
+    private validation: DoctorValidation,
+    private message: DoctorMessage,
+    private doctorTestService: DoctorTestService,
+    private httpService: HTTPService
+  ) {
+    super();
+    this.doctorForm = this.validation.formGroupInstance;
+    this.msg = this.message;
   }
+
+  ngOnInit(): void {}
 
   reset() {
-    this.scheduleForm.reset()
+    this.doctorForm.reset();
   }
 
   add() {
     this.submitted = true;
+    this.buyForm.value.supplier = this.suppliers$.filter(
+      (x) => x.id == parseInt(this.buyForm.value.supplier)
+    )[0];
+    this.buyForm.value.product_id = this.products$.filter(
+      (x) => x.id == parseInt(this.buyForm.value.product_id)
+    )[0];
 
     if (this.validation.checkValidation()) {
-      this.scheduleTestService.create(this.scheduleForm.value)
-      super.show('Confirmation', this.msg.confirmationMessages.add, 'success')
-
+      this.httpService.create(
+        URLS.URL_BASE + URLS.URL_PORT + '/stockbay/buy/create',
+        this.buyForm.value
+      );
+      super.show('Confirmation', this.msg.confirmations.add, 'success');
+      window.location.reload();
     }
-
-
-
   }
-
+  */
+  constructor() {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 }

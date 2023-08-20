@@ -1,0 +1,64 @@
+<form class="form-inner" method="post" accept-charset="utf-8">
+  <div class="form-group row">
+    <label for="name" class="col-md-6 col-form-label">
+      <font style="vertical-align: inherit">
+        <font style="vertical-align: inherit">bed Number </font> </font
+      ><i class="text-danger">
+        <font style="vertical-align: inherit">
+          <font style="vertical-align: inherit">*</font>
+        </font>
+      </i>
+    </label>
+    <div class="col-md-12">
+      <input
+        name="bedNumber"
+        type="text"
+        class="form-control"
+        id="bedNumber"
+        placeholder="Nom du compte"
+        [(ngModel)]="model.bedNumber"
+      />
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="bedType" class="col-md-6 col-form-label">
+      <font style="vertical-align: inherit">
+        <font style="vertical-align: inherit">bedType</font>
+      </font>
+    </label>
+    <div class="col-md-12">
+      <select name="category" class="form-control" [(ngModel)]="model.bedType">
+        <option *ngFor="let c of bedTypes$" value="{{ c.id }}">
+          {{ c.bedType }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!--Radio-->
+
+  <div class="form-group row">
+    <label for="floor" class="col-md-6 col-form-label">
+      <font style="vertical-align: inherit">
+        <font style="vertical-align: inherit">floor</font>
+      </font>
+    </label>
+    <div class="col-md-12">
+      <textarea
+        name="floor"
+        class="form-control"
+        placeholder="La bedType"
+        rows="7"
+        [(ngModel)]="model.floor"
+      >
+      </textarea>
+    </div>
+  </div>
+
+  <button (click)="edit()" class="btn btn-success">
+    <font style="vertical-align: inherit">
+      <font style="vertical-align: inherit">Save</font>
+    </font>
+  </button>
+</form>

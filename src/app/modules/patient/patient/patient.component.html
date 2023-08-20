@@ -3,98 +3,247 @@
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
-
   <div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <div *ngIf="loading; else loaded">
+      <app-loading></app-loading>
+    </div>
+
+    <ng-template #loaded>
+      <table
+        datatable
+        *ngIf="patients$"
+        class="row-border hover"
+        id="dataTable"
+        width="100%"
+        cellspacing="0"
+      >
         <thead>
           <tr>
-
-            <th>Prenom</th>
-            <th>Nom</th>
+            <th>First Name</th>
+            <th>Last Name</th>
             <th>Email</th>
-            <th>Téléphone</th>
-            <th>Adresse</th>
-            <th>Sexe</th>
-            <th>Actions</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th></th>
           </tr>
         </thead>
         <tfoot>
           <tr>
-            <th>Prenom</th>
-            <th>Nom</th>
+            <th>First Name</th>
+            <th>Last Name</th>
             <th>Email</th>
-            <th>Téléphone</th>
-            <th>Adresse</th>
-            <th>Sexe</th>
-            <th>Actions</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th></th>
           </tr>
         </tfoot>
         <tbody>
-
           <tr *ngFor="let item of patients$">
-            <td>{{item.firstname}}</td>
-            <td>{{item.lastname}}</td>
-            <td>{{item.email}}</td>
-            <td>{{item.mobile}}</td>
-            <td>{{item.address}}</td>
-            <td>{{item.sex}}</td>
-            <td><button data-toggle="modal" data-target="#view" type="button" class="btn btn-primary btn-sm"><i
-                  class="fas fa-address-book"></i></button>
-              <button (click)="edit(item.id)" data-toggle="modal" data-target="#edit" type="button"
-                class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
-              <button type="button" class="btn btn-danger btn-sm" (click)="delete(item.id)"><i
-                  class="fas fa-trash-alt"></i></button>
+            <td>{{ item.firstname }}</td>
+            <td>{{ item.lastname }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.phone }}</td>
+            <td>{{ item.address }}</td>
+            <td>{{ item.sex }}</td>
+            <td>
+              <button
+                data-toggle="modal"
+                data-target="#view"
+                type="button"
+                class="btn btn-primary btn-sm"
+                (click)="edit(item.id)"
+              >
+                <i class="fas fa-address-book"></i>
+              </button>
+              <button
+                (click)="edit(item.id)"
+                data-toggle="modal"
+                data-target="#edit"
+                type="button"
+                class="btn btn-warning btn-sm"
+              >
+                <i class="fas fa-edit"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                (click)="delete(item.id)"
+              >
+                <i class="fas fa-trash-alt"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm"
+                data-toggle="modal"
+                data-target="#history"
+              >
+                <i class="fas fa-history"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-info btn-sm"
+                data-toggle="modal"
+                data-target="#payment"
+              >
+                <i class="fas fa-money-bill-wave"></i>
+              </button>
             </td>
           </tr>
-
-
-
         </tbody>
       </table>
-      <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle"> Editer</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <app-edit-patient></app-edit-patient>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+    </ng-template>
 
-            </div>
+    <div
+      class="modal fade"
+      id="edit"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-edit-patient
+              (closeModalEvent)="closeModalEdit()"
+              [id]="id"
+            ></app-edit-patient>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
-
-      <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle"> Editer</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <app-view-patient></app-view-patient>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-
-            </div>
+    <div
+      class="modal fade"
+      id="view"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">View</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-view-patient [id]="id"></app-view-patient>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
+    <div
+      class="modal fade"
+      id="history"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">History</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-patient-history [id]="id"></app-patient-history>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="payment"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Payment</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-patient-payment [id]="id"></app-patient-payment>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

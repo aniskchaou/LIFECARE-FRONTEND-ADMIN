@@ -18,7 +18,8 @@ export class AppComponent {
         
     }
   ngOnInit() {
-   
+   sessionStorage.setItem('username','admin')
+   sessionStorage.setItem('password','admin')
   }
 
   hasRoute(route: string) {

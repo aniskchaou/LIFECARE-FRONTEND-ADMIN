@@ -1,5 +1,6 @@
-import { UrlSegment } from "@angular/router"
+import { UrlSegment } from '@angular/router';
 
 export default class URLS {
-    static URL_BASE = 'ffff';
-} 
+  static getInstance() {}
+  static URL_BASE = `http://localhost:8080`;
+}

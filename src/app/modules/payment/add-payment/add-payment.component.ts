@@ -1,50 +1,79 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { URLLoader } from 'src/app/main/configs/URLLoader';
 import PaymentMessage from 'src/app/main/messages/PaymentMessage';
 import PaymentTestService from 'src/app/main/mocks/PaymenttTestService';
+import { HTTPService } from 'src/app/main/services/HTTPService';
+import URLS from 'src/app/main/urls/urls';
 import PaymentValidation from 'src/app/main/validations/PaymentValidation';
 
 @Component({
   selector: 'app-add-payment',
   templateUrl: './add-payment.component.html',
-  styleUrls: ['./add-payment.component.css']
+  styleUrls: ['./add-payment.component.css'],
 })
 export class AddPaymentComponent extends URLLoader implements OnInit {
+  paymentForm: FormGroup;
+  //msg: CategoryMessage;
+  submitted = false;
+  @Output() closeModalEvent = new EventEmitter<string>();
+  categoryI18n;
+  selectedFile: File;
+  retrievedImage: any;
+  base64Data: any;
 
-  paymentForm: FormGroup
-  msg: PaymentMessage
-  submitted = false
+  constructor(
+    private validation: PaymentValidation,
+    // private message: CategoryMessage,
+    private httpService: HTTPService,
+    private router: Router
+  ) {
+    super();
+    this.paymentForm = this.validation.formGroupInstance;
+    // this.msg = this.message;
+  }
 
+  closeModal() {
+    this.closeModalEvent.emit();
+  }
 
-  get f() { return this.paymentForm.controls; }
-
-  constructor(private validation: PaymentValidation, private message: PaymentMessage,
-    private paymentTestService: PaymentTestService) {
-    super()
-    this.paymentForm = this.validation.formGroupInstance
-    this.msg = this.message
-
+  goBack() {
+    this.router
+      .navigateByUrl('/dashboard', { skipLocationChange: true })
+      .then(() => {
+        this.router.navigate(['/category']);
+      });
+  }
+  get f() {
+    return this.paymentForm.controls;
   }
 
   ngOnInit(): void {
+    //this.getCategoryByLang(URLS.getInstance().getLang());
   }
 
   reset() {
-    this.paymentForm.reset()
+    this.paymentForm.reset();
   }
 
   add() {
     this.submitted = true;
-
-    if (this.validation.checkValidation()) {
-      this.paymentTestService.create(this.paymentForm.value)
-      super.show('Confirmation', this.msg.confirmationMessages.add, 'success')
-
-    }
-
-
-
+    // if (this.validation.checkValidation()) {
+    this.httpService.create(
+      URLS.URL_BASE + '/payment/create',
+      this.paymentForm.value
+    );
+    // this.paymentForm.reset();
+    // this.closeModal();
+    // this.goBack();
+    super.show(
+      'Confirmation',
+      '',
+      // this.msg.addConfirmation[URLS.getInstance().getLang()],
+      'success'
+    );
+    this.router.navigate(['/payment']);
+    // }
   }
-
 }

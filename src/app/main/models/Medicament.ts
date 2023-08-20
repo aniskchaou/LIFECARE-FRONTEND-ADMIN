@@ -1,29 +1,36 @@
-
+import { MedecineCategory } from './MedecineCategory';
+import { MedecineType } from './MedecineType';
 
 export default class Medicament {
-    id: number
-    supplier: string
-    purchase_invoiceNo: string
-    purchase_status: string
-    purchase_date: string
+  id: number;
+  Manufacture: string;
+  category: MedecineCategory;
+  type: MedecineType;
+  name: string;
+  quantity: string;
+  price: string;
+  expireDate: string;
+  description: string;
 
-    constructor(
-        id: number,
-        supplier: string,
-        purchase_invoiceNo: string,
-        purchase_status: string,
-        purchase_date: string
-    ) {
-        this.id = id
-        this.supplier = supplier
-        this.purchase_invoiceNo = purchase_invoiceNo
-        this.purchase_status = purchase_status
-        this.purchase_date = purchase_date
-    }
-
-
-
-
-
-
+  constructor(
+    id: number,
+    Manufacture: string,
+    category: MedecineCategory,
+    type: MedecineType,
+    name: string,
+    quantity: string,
+    price: string,
+    expireDate: string,
+    description: string
+  ) {
+    this.id = id;
+    this.Manufacture = Manufacture;
+    this.category = category;
+    this.type = type;
+    this.name = name;
+    this.quantity = quantity;
+    this.price = price;
+    this.expireDate = expireDate;
+    this.description = description;
+  }
 }

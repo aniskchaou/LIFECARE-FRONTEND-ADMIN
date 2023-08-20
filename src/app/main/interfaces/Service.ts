@@ -1,7 +1,7 @@
 export default interface Service {
-    getAll()
+    getAll(url)
     get(id)
-    create(data)
+    create(url,data)
     update(old, data)
     remove(id)
 }

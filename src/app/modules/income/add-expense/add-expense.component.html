@@ -1,0 +1,159 @@
+<div class="card">
+  <div class="card-header">
+    <strong class="card-title">Nouveau</strong>
+  </div>
+  <div class="card-body">
+    <form class="form-inner" method="post" accept-charset="utf-8">
+      <div class="form-group row">
+        <label for="name" class="col-md-6 col-form-label">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Name </font> </font
+          ><i class="text-danger">
+            <font style="vertical-align: inherit">
+              <font style="vertical-align: inherit">*</font>
+            </font>
+          </i>
+        </label>
+        <div class="col-md-12">
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="name"
+            placeholder="Name"
+            value=""
+          />
+
+          <div *ngIf="submitted && f.name.errors" class="alert alert-danger">
+            <div *ngIf="submitted && f.name.errors.required">
+              {{ msg.validationMessage.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-md-6 col-form-label">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Date </font> </font
+          ><i class="text-danger">
+            <font style="vertical-align: inherit">
+              <font style="vertical-align: inherit">*</font>
+            </font>
+          </i>
+        </label>
+        <div class="col-md-12">
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="date"
+            placeholder="Name"
+            value=""
+          />
+
+          <div *ngIf="submitted && f.name.errors" class="alert alert-danger">
+            <div *ngIf="submitted && f.name.errors.required">
+              {{ msg.validationMessage.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-md-6 col-form-label">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">invoiceNumber </font> </font
+          ><i class="text-danger">
+            <font style="vertical-align: inherit">
+              <font style="vertical-align: inherit">*</font>
+            </font>
+          </i>
+        </label>
+        <div class="col-md-12">
+          <input
+            name="invoiceNumber"
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="invoiceNumber"
+            placeholder="Name"
+            value=""
+          />
+
+          <div *ngIf="submitted && f.name.errors" class="alert alert-danger">
+            <div *ngIf="submitted && f.name.errors.required">
+              {{ msg.validationMessage.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-md-6 col-form-label">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Amount </font> </font
+          ><i class="text-danger">
+            <font style="vertical-align: inherit">
+              <font style="vertical-align: inherit">*</font>
+            </font>
+          </i>
+        </label>
+        <div class="col-md-12">
+          <input
+            name="Amount"
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="Amount"
+            placeholder="Name"
+            value=""
+          />
+
+          <div *ngIf="submitted && f.name.errors" class="alert alert-danger">
+            <div *ngIf="submitted && f.name.errors.required">
+              {{ msg.validationMessage.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="name" class="col-md-6 col-form-label">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">description </font> </font
+          ><i class="text-danger">
+            <font style="vertical-align: inherit">
+              <font style="vertical-align: inherit">*</font>
+            </font>
+          </i>
+        </label>
+        <div class="col-md-12">
+          <input
+            name="description"
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="description"
+            placeholder="Name"
+            value=""
+          />
+
+          <div *ngIf="submitted && f.name.errors" class="alert alert-danger">
+            <div *ngIf="submitted && f.name.errors.required">
+              {{ msg.validationMessage.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button (click)="add()" class="btn btn-success">
+        <font style="vertical-align: inherit">
+          <font style="vertical-align: inherit">Save</font>
+        </font>
+      </button>
+    </form>
+  </div>
+</div>

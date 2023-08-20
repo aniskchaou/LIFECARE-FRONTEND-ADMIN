@@ -30,6 +30,8 @@ export default class BuyValidation {
             quantity: new FormControl('', Validators.required),
             amount: new FormControl('', Validators.required),
             status: new FormControl(),
+
+            
         })
     }
 }

@@ -1,231 +1,645 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul
+  class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+  id="accordionSidebar"
+>
+  <a
+    class="sidebar-brand d-flex align-items-center justify-content-center"
+    style="background-color: white"
+  >
+    <div class="sidebar-brand-icon rotate-n-15"></div>
+    <div class="sidebar-brand-text mx-3">
+      <img src="assets/img/logo.png" width="120" height="40" />
+    </div>
+  </a>
 
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" style="background-color: white;">
-        <div class="sidebar-brand-icon rotate-n-15">
-
-        </div>
-        <div class="sidebar-brand-text mx-3"><img src="assets/img/logo.png" width="120" height="40"></div>
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0" />
+  <!-- Nav Item - Dashboard -->
+  <li class="nav-item">
+    <a routerLinkActive="active" class="nav-link" routerLink="/dashboard">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Dashboard</span></a
+    >
+  </li>
+  <!-- Divider -->
+  <hr class="sidebar-divider" />
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse33"
+      aria-expanded="true"
+      aria-controls="collapse22"
+    >
+      <i class="fas fa-fw fa-procedures"></i>
+      <span>Patients</span>
     </a>
+    <div
+      id="collapse33"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/addpatient"
+          >Add patient</a
+        >
+        <a routerLinkActive="active" class="collapse-item" routerLink="/patient"
+          >Patients</a
+        >
+        <!--  <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/adddocument"
+          >Add document</a
+        >
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/document"
+          >Documents</a
+        > -->
+      </div>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse3"
+      aria-expanded="true"
+      aria-controls="collapse3"
+    >
+      <i class="fas fa-fw fa-user-md"></i>
+      <span>Doctor</span>
+    </a>
+    <div
+      id="collapse3"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/adddoctor"
+          >Add Doctor</a
+        >
+        <a routerLinkActive="active" class="collapse-item" routerLink="/doctor"
+          >Doctors</a
+        >
+      </div>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse21"
+      aria-expanded="true"
+      aria-controls="collapse21"
+    >
+      <i class="fas fa-fw fa-ambulance"></i>
+      <span>Ambulances</span>
+    </a>
+    <div
+      id="collapse21"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          routerLink="/add-ambulance"
+          class="collapse-item"
+          >Add Ambulance</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/ambulance"
+          class="collapse-item"
+          >Ambulances</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/add-driver"
+          class="collapse-item"
+          >Add Driver</a
+        >
+        <a routerLinkActive="active" routerLink="/driver" class="collapse-item"
+          >Driver</a
+        >
+      </div>
+    </div>
+  </li>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse22"
+      aria-expanded="true"
+      aria-controls="collapse22"
+    >
+      <i class="fas fa-fw fa-tablets"></i>
+      <span>Medicines</span>
+    </a>
+    <div
+      id="collapse22"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          routerLink="/add-medecine"
+          class="collapse-item"
+          >Add Medicine</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/medicine"
+          class="collapse-item"
+          >Medicine</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/add-medecine-type"
+          class="collapse-item"
+          >Add Medicine Type</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/medicinetype"
+          class="collapse-item"
+          >Medicine Type</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/add-medecine-category"
+          class="collapse-item"
+          >Add Medicine Category</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/medicinecategory"
+          class="collapse-item"
+          >Medicine Category</a
+        >
+      </div>
+    </div>
+  </li>
 
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item ">
-        <a routerLinkActive="active" class="nav-link" routerLink="/dashboard">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Tableau de bord</span></a>
-    </li>
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse23"
+      aria-expanded="true"
+      aria-controls="collapse23"
+    >
+      <i class="fas fa-fw fa-procedures"></i>
+      <span>Beds</span>
+    </a>
+    <div
+      id="collapse23"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a routerLinkActive="active" routerLink="/add-bed" class="collapse-item"
+          >Add Bed</a
+        >
+        <a routerLinkActive="active" routerLink="/bed" class="collapse-item"
+          >Beds</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/add-bed-type"
+          class="collapse-item"
+          >Add Bed Types</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/bed-types"
+          class="collapse-item"
+          >Bed Types</a
+        >
+      </div>
+    </div>
+  </li>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider">
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse24"
+      aria-expanded="true"
+      aria-controls="collapse24"
+    >
+      <i class="fas fa-fw fa-syringe"></i>
+      <span>Vaccination</span>
+    </a>
+    <div
+      id="collapse24"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          routerLink="/add-vaccination"
+          class="collapse-item"
+          >Add Vaccination</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/vaccination"
+          class="collapse-item"
+          >Vaccination</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/addvaccinatedpeople"
+          class="collapse-item"
+          >Add Vaccinated People</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/vaccinatedpeople"
+          class="collapse-item"
+          >Vaccinated People</a
+        >
+      </div>
+    </div>
+  </li>
 
-    <!-- Heading -->
+  <!--  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse25"
+      aria-expanded="true"
+      aria-controls="collapse25"
+    >
+      <i class="fas fa-fw fa-hospital-symbol"></i>
+      <span>Radiology</span>
+    </a>
+    <div
+      id="collapse25"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          routerLink="/add-radiology"
+          class="collapse-item"
+          >Add Radiology</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/radiology"
+          class="collapse-item"
+          >Radiology</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/addradiologytype"
+          class="collapse-item"
+          >Add Radiology Type</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/radiologytype"
+          class="collapse-item"
+          >Radiology Type</a
+        >
+      </div>
+    </div>
+  </li> -->
 
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse26"
+      aria-expanded="true"
+      aria-controls="collapse26"
+    >
+      <i class="fas fa-fw fa-vial"></i>
+      <span>Bloods</span>
+    </a>
+    <div
+      id="collapse26"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          routerLink="/add-blood-donor"
+          class="collapse-item"
+          >Add Blood Donors</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/blooddonor"
+          class="collapse-item"
+          >Blood Donors</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/add-blood-group"
+          class="collapse-item"
+          >Add Blood Group</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/bloodgroup"
+          class="collapse-item"
+          >Blood Groups</a
+        >
+      </div>
+    </div>
+  </li>
 
-    <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-            aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-hospital-user"></i>
-            <span>Département</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
+  <!-- Heading -->
 
-                <a routerLinkActive="active" class="collapse-item" routerLink="/adddepartement">Ajouter une
-                    departement</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/departement">Liste des departemenst</a>
+  <!-- Nav Item - Pages Collapse Menu -->
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapseTwo"
+      aria-expanded="true"
+      aria-controls="collapseTwo"
+    >
+      <i class="fas fa-fw fa-hospital-user"></i>
+      <span>Departement</span>
+    </a>
+    <div
+      id="collapseTwo"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/adddepartement"
+          >add departement</a
+        >
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/departement"
+          >Departements</a
+        >
+      </div>
+    </div>
+  </li>
 
-            </div>
-        </div>
-    </li>
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse5"
+      aria-expanded="true"
+      aria-controls="collapse5"
+    >
+      <i class="fas fa-fw fa-x-ray"></i>
+      <span>Appointements</span>
+    </a>
+    <div
+      id="collapse5"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/addrendezvous"
+          >Add Appointement</a
+        >
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/rendezvous"
+          >Appointements</a
+        >
+      </div>
+    </div>
+  </li>
 
+  <!--   <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse6"
+      aria-expanded="true"
+      aria-controls="collapse6"
+    >
+      <i class="fas fa-fw fa-file-prescription"></i>
+      <span>Prescriptions</span>
+    </a>
+    <div
+      id="collapse6"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/addprescription"
+          >Add prescription</a
+        >
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/prescription"
+          >Prescriptions</a
+        >
+      </div>
+    </div>
+  </li> -->
 
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3" aria-expanded="true"
-            aria-controls="collapse3">
-            <i class="fas fa-fw fa-user-md"></i>
-            <span>Docteur</span>
-        </a>
-        <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
+  <!--  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse7"
+      aria-expanded="true"
+      aria-controls="collapse7"
+    >
+      <i class="fas fa-fw fa-first-aid"></i>
+      <span>Accounts</span>
+    </a>
+    <div
+      id="collapse7"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/addinvoice"
+          >Add invoice</a
+        >
+        <a routerLinkActive="active" class="collapse-item" routerLink="/invoice"
+          >Invoices</a
+        >
+          <a
+          routerLinkActive="active"
+          routerLink="/add-payment"
+          class="collapse-item"
+          >Add payment</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/payments"
+          class="collapse-item"
+          >Payments</a
+        > 
+      </div>
+    </div>
+  </li> -->
 
-                <a routerLinkActive="active" class="collapse-item" routerLink="/adddoctor">Ajouter une medecin</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/doctor">Liste des medecins</a>
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse9"
+      aria-expanded="true"
+      aria-controls="collapse9"
+    >
+      <i class="fas fa-fw fa-file-medical-alt"></i>
+      <span>Services</span>
+    </a>
+    <div
+      id="collapse9"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/addservice"
+          >Add service</a
+        >
 
-            </div>
-        </div>
-    </li>
+        <a routerLinkActive="active" class="collapse-item" routerLink="/service"
+          >Services</a
+        >
 
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse22" aria-expanded="true"
-            aria-controls="collapse22">
-            <i class="fas fa-fw fa-procedures"></i>
-            <span>Patient</span>
-        </a>
-        <div id="collapse22" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
+        <!--  <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/add-income"
+          >Add Income</a
+        >
+        <a routerLinkActive="active" class="collapse-item" routerLink="/incomes"
+          >Incomes</a
+        >
 
-                <a routerLinkActive="active" class="collapse-item" routerLink="/addpatient">Ajouter une patient</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/patient">Liste des patients</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/adddocument">Ajouter un document</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/document">Liste des documents</a>
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/add-expense"
+          >Add expense</a
+        >
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/expenses"
+          >Expenses</a
+        > -->
+      </div>
+    </div>
+  </li>
 
-            </div>
-        </div>
-    </li>
+  <!-- <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse20"
+      aria-expanded="true"
+      aria-controls="collapse20"
+    >
+      <i class="fas fa-fw fa-cog"></i>
+      <span>Utilities</span>
+    </a>
+    <div
+      id="collapse20"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          routerLink="/add-diagnosis"
+          class="collapse-item"
+          >Add Diagnosis</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/diagnosis"
+          class="collapse-item"
+          >Diagnosis</a
+        >
 
-    <!--
-      <li class="nav-item">
-         <a class="nav-link collapsed"  href="#" data-toggle="collapse" data-target="#collapse4"
-             aria-expanded="true" aria-controls="collapse4">
-             <i class="fas fa-fw fa-hospital-symbol"></i>
-             <span>Programme</span>
-         </a>
-         <div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-             <div class="bg-white py-2 collapse-inner rounded">
-                 <a routerLinkActive="active" class="collapse-item" >Ajouter un horaire</a>
-                 <a routerLinkActive="active" class="collapse-item" >Liste des horaires</a>  
-             </div>
-         </div>
-     </li>
-    -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5" aria-expanded="true"
-            aria-controls="collapse5">
-            <i class="fas fa-fw fa-x-ray"></i>
-            <span>Rendez-vous</span>
-        </a>
-        <div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          routerLink="/add-test-lab"
+          class="collapse-item"
+          >Add Test Lab</a
+        >
+        <a
+          routerLinkActive="active"
+          routerLink="/test-lab"
+          class="collapse-item"
+          >Test Lab</a
+        >
+      </div>
+    </div>
+  </li> -->
 
-                <a routerLinkActive="active" class="collapse-item" routerLink="/addrendezvous">Ajouter un
-                    rendez-vous</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/rendezvous">Liste des rendez-vous</a>
-
-
-            </div>
-        </div>
-    </li>
-
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true"
-            aria-controls="collapse6">
-            <i class="fas fa-fw fa-file-prescription"></i>
-            <span>Prescription</span>
-        </a>
-        <div id="collapse6" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-
-                <a routerLinkActive="active" class="collapse-item" routerLink="/addprescription">Ajouter un
-                    prescription</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/prescription">Liste des prescription</a>
-
-
-            </div>
-        </div>
-    </li>
-
-    <!--
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse7" aria-expanded="true"
-            aria-controls="collapse7">
-            <i class="fas fa-fw fa-first-aid"></i>
-            <span>Compte</span>
-        </a>
-        <div id="collapse7" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a routerLinkActive="active" class="collapse-item">Ajouter un compte</a>
-                <a routerLinkActive="active" class="collapse-item">Liste des comptes</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/addinvoice">Ajouter une facture</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/invoice">Liste des factures</a>
-                <a routerLinkActive="active" class="collapse-item">Ajouter un paiement</a>
-                <a routerLinkActive="active" class="collapse-item">Liste des paiement</a>
-            </div>
-        </div>
-    </li>
--->
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse8" aria-expanded="true"
-            aria-controls="collapse8">
-            <i class="fas fa-fw fa-hand-holding-medical"></i>
-            <span>Assurance</span>
-        </a>
-        <div id="collapse8" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-
-                <a routerLinkActive="active" class="collapse-item" routerLink="/addinsurance">Ajouter un assurance</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/insurance">Liste des assurances</a>
-
-
-            </div>
-        </div>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse9" aria-expanded="true"
-            aria-controls="collapse9">
-            <i class="fas fa-fw fa-file-medical-alt"></i>
-            <span>Facture</span>
-        </a>
-        <div id="collapse9" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-
-                <a routerLinkActive="active" class="collapse-item" routerLink="/addservice">Ajouter un service</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/service">Liste des services</a>
-                <!-- <a routerLinkActive="active" class="collapse-item" routerLink="/addinvoice">Ajouter une facture</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/invoice">Liste des facture</a>
-               -->
-
-            </div>
-        </div>
-    </li>
-    <!--
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse10" aria-expanded="true"
-            aria-controls="collapse10">
-            <i class="fas fa-fw fa-book-medical"></i>
-            <span>Dossier</span>
-        </a>
-        <div id="collapse10" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-
-                <a routerLinkActive="active" class="collapse-item" routerLink="/addpatient">Ajouter un patient</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/patient">Liste des patients</a>
-
-
-            </div>
-        </div>
-    </li>
--->
-
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse11" aria-expanded="true"
-            aria-controls="collapse11">
-            <i class="fas fa-fw fa-users"></i>
-            <span>RH</span>
-        </a>
-        <div id="collapse11" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-
-                <a routerLinkActive="active" class="collapse-item" routerLink="/addemployee">Ajouter un employés</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/accountant">Liste des comptables</a>
-
-                <a routerLinkActive="active" class="collapse-item" routerLink="/nurse">Liste des infimieres</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/pharmacist">Liste des pharmaciens</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/receptionist">Liste des
-                    receptioniste</a>
-
-
-            </div>
-        </div>
-    </li>
-    <!--
+  <!--
        <li class="nav-item">
          <a class="nav-link collapsed"  href="#" data-toggle="collapse" data-target="#collapse12"
              aria-expanded="true" aria-controls="collapse12">
@@ -244,26 +658,33 @@
          </div>
      </li>
     -->
-
-
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse13" aria-expanded="true"
-            aria-controls="collapse13">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Configurations</span>
-        </a>
-        <div id="collapse13" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a routerLinkActive="active" class="collapse-item" routerLink="/system-config">Système</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/email-config">Email</a>
-                <a routerLinkActive="active" class="collapse-item" routerLink="/hospital-config">Hopital</a>
-            </div>
-        </div>
-    </li>
-
-
-
-
-
+  <hr class="sidebar-divider" />
+  <li class="nav-item">
+    <a
+      class="nav-link collapsed"
+      href="#"
+      data-toggle="collapse"
+      data-target="#collapse13"
+      aria-expanded="true"
+      aria-controls="collapse13"
+    >
+      <i class="fas fa-fw fa-cog"></i>
+      <span>Settings</span>
+    </a>
+    <div
+      id="collapse13"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordionSidebar"
+    >
+      <div class="bg-white py-2 collapse-inner rounded">
+        <a
+          routerLinkActive="active"
+          class="collapse-item"
+          routerLink="/system-config"
+          >System</a
+        >
+      </div>
+    </div>
+  </li>
 </ul>

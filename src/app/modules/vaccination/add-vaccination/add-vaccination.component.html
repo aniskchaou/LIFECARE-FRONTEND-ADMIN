@@ -1,0 +1,111 @@
+<div class="card">
+  <div class="card-header">
+    <strong class="card-title">New</strong>
+  </div>
+  <div class="card-body">
+    <form
+      class="form-inner"
+      method="post"
+      accept-charset="utf-8"
+      [formGroup]="vaccinationForm"
+    >
+      <div class="form-group row">
+        <label for="name" class="col-md-6 col-form-label">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Name </font> </font
+          ><i class="text-danger">
+            <font style="vertical-align: inherit">
+              <font style="vertical-align: inherit">*</font>
+            </font>
+          </i>
+        </label>
+        <div class="col-md-12">
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="name"
+            [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+            formControlName="name"
+            placeholder="Vaccination Name"
+            value=""
+          />
+
+          <div *ngIf="submitted && f.name.errors" class="alert alert-danger">
+            <div *ngIf="submitted && f.name.errors.required">
+              {{ msg.validationMessage.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="description" class="col-md-6 col-form-label">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Constructor</font>
+          </font>
+        </label>
+        <div class="col-md-12">
+          <input
+            [ngClass]="{ 'is-invalid': submitted && f.description.errors }"
+            formControlName="constractor"
+            name="constractor"
+            class="form-control"
+            placeholder="Constructor"
+            rows="7"
+          />
+
+          <div
+            *ngIf="submitted && f.description.errors"
+            class="alert alert-danger"
+          >
+            <div *ngIf="submitted && f.description.errors.required">
+              {{ msg.validationMessage.description }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="description" class="col-md-6 col-form-label">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Commercial Name</font>
+          </font>
+        </label>
+        <div class="col-md-12">
+          <input
+            [ngClass]="{ 'is-invalid': submitted && f.description.errors }"
+            formControlName="commercialName"
+            name="commercialName"
+            class="form-control"
+            placeholder="Commercial Name"
+          />
+
+          <div
+            *ngIf="submitted && f.description.errors"
+            class="alert alert-danger"
+          >
+            <div *ngIf="submitted && f.description.errors.required">
+              {{ msg.validationMessage.description }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="">
+          <div class="btn btn-primarys">
+            <div class="or"></div>
+            <button (click)="add()" class="btn btn-success">
+              <font style="vertical-align: inherit">
+                <font style="vertical-align: inherit"
+                  ><i class="fas fa-check"></i> Save</font
+                >
+              </font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

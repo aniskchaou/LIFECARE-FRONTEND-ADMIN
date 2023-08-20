@@ -1,0 +1,64 @@
+<div class="panel-body">
+  <div class="row">
+    <div class="col-md-3 col-lg-3" align="center">
+      <img
+        alt="Image"
+        src="/assets/img/undraw_profile.svg"
+        class="img-thumbnail img-responsive img-hw-200"
+      />
+      <h3>
+        <font style="vertical-align: inherit">
+          <font style="vertical-align: inherit">
+            {{ model?.firstname + " " + model?.lastname }}
+          </font>
+        </font>
+      </h3>
+    </div>
+    <div class="col-md-7 col-lg-7">
+      <dl class="dl-horizontal">
+        <dt>
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Email</font>
+          </font>
+        </dt>
+        <dd>
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">{{ model?.email }}</font>
+          </font>
+        </dd>
+        <dt>
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Address</font>
+          </font>
+        </dt>
+        <dd>
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">{{ model?.address }}</font>
+          </font>
+        </dd>
+        <dt>
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Birth Date</font>
+          </font>
+        </dt>
+        <dd>
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">{{
+              model.date_of_birth
+            }}</font>
+          </font>
+        </dd>
+        <dt>
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Status</font>
+          </font>
+        </dt>
+        <dd>
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">{{ model?.status }}</font>
+          </font>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>

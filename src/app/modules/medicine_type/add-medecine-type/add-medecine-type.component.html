@@ -1,0 +1,57 @@
+<div class="card">
+  <div class="card-header">
+    <strong class="card-title">New</strong>
+  </div>
+  <div class="card-body">
+    <form
+      class="form-inner"
+      method="post"
+      accept-charset="utf-8"
+      [formGroup]="medecineTypeForm"
+    >
+      <div class="form-group row">
+        <label for="name" class="col-md-6 col-form-label">
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">Name </font> </font
+          ><i class="text-danger">
+            <font style="vertical-align: inherit">
+              <font style="vertical-align: inherit">*</font>
+            </font>
+          </i>
+        </label>
+        <div class="col-md-12">
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="name"
+            placeholder="Name"
+            value=""
+          />
+
+          <!--   <div *ngIf="submitted && f.name.errors" class="alert alert-danger">
+            <div *ngIf="submitted && f.name.errors.required">
+              {{ msg.validationMessage.name }}
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="">
+          <div class="btn btn-primarys">
+            <div class="or"></div>
+            <button (click)="add()" class="btn btn-success">
+              <font style="vertical-align: inherit">
+                <font style="vertical-align: inherit"
+                  ><i class="fas fa-check"></i> Save</font
+                >
+              </font>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

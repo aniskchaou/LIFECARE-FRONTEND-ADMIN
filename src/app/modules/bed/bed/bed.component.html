@@ -1,0 +1,95 @@
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Beds</h1>
+
+<div class="card shadow mb-4">
+  <div class="card-body">
+    <table
+      class="table table-bordered"
+      id="dataTable"
+      width="100%"
+      cellspacing="0"
+    >
+      <thead>
+        <tr>
+          <th>Bed Number</th>
+          <th>Bed Type</th>
+          <th>Floor</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Bed Number</th>
+          <th>Bed Typz</th>
+          <th>Floor</th>
+          <th>Actions</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr *ngFor="let item of beds$">
+          <td>{{ item.bedNumber }}</td>
+          <td>{{ item.bedType?.bedType }}</td>
+          <td>{{ item.floor }}</td>
+          <td>
+            <button
+              (click)="edit(item.id)"
+              data-toggle="modal"
+              data-target="#edit"
+              type="button"
+              class="btn btn-warning btn-sm"
+            >
+              <i class="fas fa-edit"></i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger btn-sm"
+              (click)="delete(item.id)"
+            >
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div
+      class="modal fade"
+      id="edit"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
+            <button
+              type="button"
+              id="close"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-edit-bed
+              (closeModalEvent)="closeModal()"
+              [id]="id"
+            ></app-edit-bed>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
